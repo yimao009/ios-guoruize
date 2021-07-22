@@ -127,12 +127,12 @@
 			children = (
 				06554BFA26A9848F007E7B8B /* Configurations */,
 				06554BC926A95FF8007E7B8B /* AppDelegate.swift */,
+				06554BD226A95FFA007E7B8B /* Assets.xcassets */,
+				06554BD726A95FFA007E7B8B /* Info.plist */,
+				06554BD426A95FFA007E7B8B /* LaunchScreen.storyboard */,
+				06554BCF26A95FF8007E7B8B /* Main.storyboard */,
 				06554BCB26A95FF8007E7B8B /* SceneDelegate.swift */,
 				06554BCD26A95FF8007E7B8B /* ViewController.swift */,
-				06554BCF26A95FF8007E7B8B /* Main.storyboard */,
-				06554BD226A95FFA007E7B8B /* Assets.xcassets */,
-				06554BD426A95FFA007E7B8B /* LaunchScreen.storyboard */,
-				06554BD726A95FFA007E7B8B /* Info.plist */,
 			);
 			path = Moments;
 			sourceTree = "<group>";
@@ -140,8 +140,8 @@
 		06554BDF26A95FFB007E7B8B /* MomentsTests */ = {
 			isa = PBXGroup;
 			children = (
-				06554BE026A95FFB007E7B8B /* MomentsTests.swift */,
 				06554BE226A95FFB007E7B8B /* Info.plist */,
+				06554BE026A95FFB007E7B8B /* MomentsTests.swift */,
 			);
 			path = MomentsTests;
 			sourceTree = "<group>";
@@ -149,8 +149,8 @@
 		06554BEA26A95FFB007E7B8B /* MomentsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				06554BEB26A95FFB007E7B8B /* MomentsUITests.swift */,
 				06554BED26A95FFB007E7B8B /* Info.plist */,
+				06554BEB26A95FFB007E7B8B /* MomentsUITests.swift */,
 			);
 			path = MomentsUITests;
 			sourceTree = "<group>";
@@ -158,9 +158,9 @@
 		06554BFA26A9848F007E7B8B /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
-				06554C1426A98560007E7B8B /* Targets */,
-				06554C1326A9853D007E7B8B /* Shared */,
 				06554C1226A98527007E7B8B /* Project */,
+				06554C1326A9853D007E7B8B /* Shared */,
+				06554C1426A98560007E7B8B /* Targets */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -168,9 +168,9 @@
 		06554C1226A98527007E7B8B /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				06554BFE26A9848F007E7B8B /* AppStoreProject.xcconfig */,
 				06554C0326A9848F007E7B8B /* BaseProject.xcconfig */,
 				06554C0126A9848F007E7B8B /* DebugProject.xcconfig */,
-				06554BFE26A9848F007E7B8B /* AppStoreProject.xcconfig */,
 				06554BFB26A9848F007E7B8B /* InternalProject.xcconfig */,
 			);
 			name = Project;
@@ -179,8 +179,8 @@
 		06554C1326A9853D007E7B8B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				06554C0526A9848F007E7B8B /* SDKAndDeviceSupport.xcconfig */,
 				06554BFD26A9848F007E7B8B /* CompilerAndLanguage.xcconfig */,
+				06554C0526A9848F007E7B8B /* SDKAndDeviceSupport.xcconfig */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -208,14 +208,14 @@
 		E74DFE7908F1E255C007C292 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DA026A39634913CA1FA35FF6 /* Pods-Moments.debug.xcconfig */,
-				F52A977AD480201A5295CD67 /* Pods-Moments.release.xcconfig */,
-				0C3BE388A5D87650497B54DF /* Pods-MomentsTests.debug.xcconfig */,
-				EEB8DFDDEF0814C783755321 /* Pods-MomentsTests.release.xcconfig */,
 				0A2810A4939606F05C4A3C6E /* Pods-Moments.appstore.xcconfig */,
+				DA026A39634913CA1FA35FF6 /* Pods-Moments.debug.xcconfig */,
 				70CAC143A598AC1952D60D4C /* Pods-Moments.internal.xcconfig */,
+				F52A977AD480201A5295CD67 /* Pods-Moments.release.xcconfig */,
 				4725586C804CA8570815729B /* Pods-MomentsTests.appstore.xcconfig */,
+				0C3BE388A5D87650497B54DF /* Pods-MomentsTests.debug.xcconfig */,
 				2657B8BE2C11BD2F095BE49C /* Pods-MomentsTests.internal.xcconfig */,
+				EEB8DFDDEF0814C783755321 /* Pods-MomentsTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
@@ -329,8 +329,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06554BD626A95FFA007E7B8B /* LaunchScreen.storyboard in Resources */,
 				06554BD326A95FFA007E7B8B /* Assets.xcassets in Resources */,
+				06554BD626A95FFA007E7B8B /* LaunchScreen.storyboard in Resources */,
 				06554BD126A95FF8007E7B8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,9 +455,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06554BCE26A95FF8007E7B8B /* ViewController.swift in Sources */,
 				06554BCA26A95FF8007E7B8B /* AppDelegate.swift in Sources */,
 				06554BCC26A95FF8007E7B8B /* SceneDelegate.swift in Sources */,
+				06554BCE26A95FF8007E7B8B /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

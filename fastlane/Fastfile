@@ -31,9 +31,16 @@ platform :ios do
       )
     end
 
-    lane :swiftformat do
+    lane :codeformat do
       swiftlint(
         mode: :autocorrect,
+        executable: "./Pods/SwiftLint/swiftlint",  # Important if you've installed it via CocoaPods
+        raise_if_swiftlint_error: true)
+    end
+    
+    lane :codelint do 
+      swiftlint(
+        mode: :lint,
         executable: "./Pods/SwiftLint/swiftlint",  # Important if you've installed it via CocoaPods
         raise_if_swiftlint_error: true)
     end

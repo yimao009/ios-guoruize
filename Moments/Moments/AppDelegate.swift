@@ -34,3 +34,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
+#if DEBUG || INTERNAL
+extension UIWindow {
+    open override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        let appRoute: AppRouting = AppRouter.instance
+        if motion == .motionShake {
+            appRoute.routeToInternalMenu(.present, from: rootViewController)
+        }
+    }
+}
+
+#endif

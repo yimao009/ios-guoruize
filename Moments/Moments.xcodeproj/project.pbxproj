@@ -16,6 +16,15 @@
 		06554BE126A95FFB007E7B8B /* MomentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554BE026A95FFB007E7B8B /* MomentsTests.swift */; };
 		06554BEC26A95FFB007E7B8B /* MomentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554BEB26A95FFB007E7B8B /* MomentsUITests.swift */; };
 		06554C2826AA5E43007E7B8B /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C2726AA5E43007E7B8B /* Functions.swift */; };
+		06554C2C26AA6097007E7B8B /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C2B26AA6097007E7B8B /* AppRouter.swift */; };
+		06554C3426AA6505007E7B8B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C3326AA6505007E7B8B /* BaseViewController.swift */; };
+		06554C3626AA65A6007E7B8B /* InternalMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C3526AA65A6007E7B8B /* InternalMenuViewController.swift */; };
+		06554C3826AA664C007E7B8B /* InternalMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C3726AA664C007E7B8B /* InternalMenuViewModel.swift */; };
+		06554C3A26AA66FC007E7B8B /* InternalMenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C3926AA66FC007E7B8B /* InternalMenuSection.swift */; };
+		06554C3E26AA68F2007E7B8B /* InternalMenuItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C3D26AA68F2007E7B8B /* InternalMenuItemViewModel.swift */; };
+		06554C4026AA6BCE007E7B8B /* InternalMenuDescriptionItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C3F26AA6BCE007E7B8B /* InternalMenuDescriptionItemViewModel.swift */; };
+		06554C4226AA6E9C007E7B8B /* InternalMenuDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C4126AA6E9C007E7B8B /* InternalMenuDescriptionCell.swift */; };
+		06554C4426AA6EC8007E7B8B /* InternalMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C4326AA6EC8007E7B8B /* InternalMenuCell.swift */; };
 		BB63A786EDCDDE31A9FD44D3 /* Pods_Moments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023029A0117D29A1A0604469 /* Pods_Moments.framework */; };
 		BD4C5D9B2830F9E2B16B5D9E /* Pods_MomentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +73,15 @@
 		06554C1B26A985B2007E7B8B /* BaseTarget.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BaseTarget.xcconfig; sourceTree = "<group>"; };
 		06554C1C26A985B2007E7B8B /* DebugTarget.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DebugTarget.xcconfig; sourceTree = "<group>"; };
 		06554C2726AA5E43007E7B8B /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		06554C2B26AA6097007E7B8B /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		06554C3326AA6505007E7B8B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		06554C3526AA65A6007E7B8B /* InternalMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuViewController.swift; sourceTree = "<group>"; };
+		06554C3726AA664C007E7B8B /* InternalMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuViewModel.swift; sourceTree = "<group>"; };
+		06554C3926AA66FC007E7B8B /* InternalMenuSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuSection.swift; sourceTree = "<group>"; };
+		06554C3D26AA68F2007E7B8B /* InternalMenuItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuItemViewModel.swift; sourceTree = "<group>"; };
+		06554C3F26AA6BCE007E7B8B /* InternalMenuDescriptionItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuDescriptionItemViewModel.swift; sourceTree = "<group>"; };
+		06554C4126AA6E9C007E7B8B /* InternalMenuDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuDescriptionCell.swift; sourceTree = "<group>"; };
+		06554C4326AA6EC8007E7B8B /* InternalMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuCell.swift; sourceTree = "<group>"; };
 		0A2810A4939606F05C4A3C6E /* Pods-Moments.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments.appstore.xcconfig"; path = "Target Support Files/Pods-Moments/Pods-Moments.appstore.xcconfig"; sourceTree = "<group>"; };
 		0C3BE388A5D87650497B54DF /* Pods-MomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentsTests.debug.xcconfig"; path = "Target Support Files/Pods-MomentsTests/Pods-MomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MomentsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				06554BFA26A9848F007E7B8B /* Configurations */,
+				06554C2D26AA644D007E7B8B /* Features */,
 				06554C2526AA5BFB007E7B8B /* Foundation */,
 				06554BC926A95FF8007E7B8B /* AppDelegate.swift */,
 				06554BD226A95FFA007E7B8B /* Assets.xcassets */,
@@ -202,7 +221,9 @@
 		06554C2526AA5BFB007E7B8B /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				06554C2926AA6071007E7B8B /* Routing */,
 				06554C2626AA5E30007E7B8B /* Utilities */,
+				06554C2A26AA607A007E7B8B /* Views */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -213,6 +234,60 @@
 				06554C2726AA5E43007E7B8B /* Functions.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		06554C2926AA6071007E7B8B /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				06554C2B26AA6097007E7B8B /* AppRouter.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		06554C2A26AA607A007E7B8B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				06554C3326AA6505007E7B8B /* BaseViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		06554C2D26AA644D007E7B8B /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				06554C2E26AA645E007E7B8B /* InternalMenu */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		06554C2E26AA645E007E7B8B /* InternalMenu */ = {
+			isa = PBXGroup;
+			children = (
+				06554C2F26AA6465007E7B8B /* ViewModel */,
+				06554C3026AA6472007E7B8B /* Views */,
+			);
+			path = InternalMenu;
+			sourceTree = "<group>";
+		};
+		06554C2F26AA6465007E7B8B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				06554C3F26AA6BCE007E7B8B /* InternalMenuDescriptionItemViewModel.swift */,
+				06554C3D26AA68F2007E7B8B /* InternalMenuItemViewModel.swift */,
+				06554C3926AA66FC007E7B8B /* InternalMenuSection.swift */,
+				06554C3726AA664C007E7B8B /* InternalMenuViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		06554C3026AA6472007E7B8B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				06554C4326AA6EC8007E7B8B /* InternalMenuCell.swift */,
+				06554C4126AA6E9C007E7B8B /* InternalMenuDescriptionCell.swift */,
+				06554C3526AA65A6007E7B8B /* InternalMenuViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		5590A371016DF6E7A106A86C /* Frameworks */ = {
@@ -475,7 +550,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				06554BCA26A95FF8007E7B8B /* AppDelegate.swift in Sources */,
+				06554C2C26AA6097007E7B8B /* AppRouter.swift in Sources */,
+				06554C3426AA6505007E7B8B /* BaseViewController.swift in Sources */,
 				06554C2826AA5E43007E7B8B /* Functions.swift in Sources */,
+				06554C4426AA6EC8007E7B8B /* InternalMenuCell.swift in Sources */,
+				06554C4226AA6E9C007E7B8B /* InternalMenuDescriptionCell.swift in Sources */,
+				06554C4026AA6BCE007E7B8B /* InternalMenuDescriptionItemViewModel.swift in Sources */,
+				06554C3E26AA68F2007E7B8B /* InternalMenuItemViewModel.swift in Sources */,
+				06554C3A26AA66FC007E7B8B /* InternalMenuSection.swift in Sources */,
+				06554C3626AA65A6007E7B8B /* InternalMenuViewController.swift in Sources */,
+				06554C3826AA664C007E7B8B /* InternalMenuViewModel.swift in Sources */,
 				06554BCC26A95FF8007E7B8B /* SceneDelegate.swift in Sources */,
 				06554BCE26A95FF8007E7B8B /* ViewController.swift in Sources */,
 			);

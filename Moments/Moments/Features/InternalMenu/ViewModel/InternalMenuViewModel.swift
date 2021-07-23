@@ -19,9 +19,13 @@ class InternalMenuViewModel: InternalMenuViewModelType {
 
     init(appRouter: AppRouting) {
         let appVersion = "Version \((Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String) ?? "1.0")"
+        let appName = "AppName \(Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String ?? "Get Name Error")"
         let infoSection = InternalMenuSection(
             title: "General Info",
-            items: [InternalMenuDescriptionItemViewModel(title: appVersion)]
+            items: [
+                InternalMenuDescriptionItemViewModel(title: appVersion),
+                InternalMenuDescriptionItemViewModel(title: appName)
+            ]
         )
 
         // 发送可观察序列

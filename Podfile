@@ -22,6 +22,10 @@ def ui_pods
     pod 'RxDataSources', '4.0.1'
 end
 
+def internal_pods
+    pod 'DesignKit', :path => './Frameworks/DesignKit', :inhibit_warnings => false
+end
+
 def test_pods
     pod 'Quick', '3.0.0'
     pod 'Nimble', '9.0.0'
@@ -32,6 +36,7 @@ end
 target 'Moments' do
     core_pods
     ui_pods
+    internal_pods
 end
 
 target 'MomentsTests' do

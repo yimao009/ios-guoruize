@@ -15,6 +15,7 @@
 		06554BD626A95FFA007E7B8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06554BD426A95FFA007E7B8B /* LaunchScreen.storyboard */; };
 		06554BE126A95FFB007E7B8B /* MomentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554BE026A95FFB007E7B8B /* MomentsTests.swift */; };
 		06554BEC26A95FFB007E7B8B /* MomentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554BEB26A95FFB007E7B8B /* MomentsUITests.swift */; };
+		06554C2826AA5E43007E7B8B /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C2726AA5E43007E7B8B /* Functions.swift */; };
 		BB63A786EDCDDE31A9FD44D3 /* Pods_Moments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023029A0117D29A1A0604469 /* Pods_Moments.framework */; };
 		BD4C5D9B2830F9E2B16B5D9E /* Pods_MomentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		06554C1A26A985B2007E7B8B /* InternalTarget.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = InternalTarget.xcconfig; sourceTree = "<group>"; };
 		06554C1B26A985B2007E7B8B /* BaseTarget.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BaseTarget.xcconfig; sourceTree = "<group>"; };
 		06554C1C26A985B2007E7B8B /* DebugTarget.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DebugTarget.xcconfig; sourceTree = "<group>"; };
+		06554C2726AA5E43007E7B8B /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		0A2810A4939606F05C4A3C6E /* Pods-Moments.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments.appstore.xcconfig"; path = "Target Support Files/Pods-Moments/Pods-Moments.appstore.xcconfig"; sourceTree = "<group>"; };
 		0C3BE388A5D87650497B54DF /* Pods-MomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentsTests.debug.xcconfig"; path = "Target Support Files/Pods-MomentsTests/Pods-MomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MomentsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				06554BFA26A9848F007E7B8B /* Configurations */,
+				06554C2526AA5BFB007E7B8B /* Foundation */,
 				06554BC926A95FF8007E7B8B /* AppDelegate.swift */,
 				06554BD226A95FFA007E7B8B /* Assets.xcassets */,
 				06554BD726A95FFA007E7B8B /* Info.plist */,
@@ -194,6 +197,22 @@
 				06554C1A26A985B2007E7B8B /* InternalTarget.xcconfig */,
 			);
 			name = Targets;
+			sourceTree = "<group>";
+		};
+		06554C2526AA5BFB007E7B8B /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				06554C2626AA5E30007E7B8B /* Utilities */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		06554C2626AA5E30007E7B8B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				06554C2726AA5E43007E7B8B /* Functions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		5590A371016DF6E7A106A86C /* Frameworks */ = {
@@ -456,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06554BCA26A95FF8007E7B8B /* AppDelegate.swift in Sources */,
+				06554C2826AA5E43007E7B8B /* Functions.swift in Sources */,
 				06554BCC26A95FF8007E7B8B /* SceneDelegate.swift in Sources */,
 				06554BCE26A95FF8007E7B8B /* ViewController.swift in Sources */,
 			);

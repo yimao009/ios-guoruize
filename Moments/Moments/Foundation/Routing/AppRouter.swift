@@ -7,17 +7,8 @@
 
 import UIKit
 
-enum NavigationAction {
-    case present, push
-}
-
 protocol AppRouting {
-
-    /// 导航道调试菜单，【只有开发和测试环境可以看到】
-    /// - Parameters:
-    ///   - action: 打开方法 push或者present
-    ///   - from: 从那个VC打开
-    func routeToInternalMenu(_ action: NavigationAction, from: UIViewController?)
+    func presentInternalMenu(from viewController: UIViewController?)
 }
 
 struct AppRouter: AppRouting {
@@ -29,11 +20,12 @@ struct AppRouter: AppRouting {
 
     private init() { }
 
-    func routeToInternalMenu(_ action: NavigationAction, from: UIViewController?) {
-        guard let rootViewController = rootViewController else { return }
+    func presentInternalMenu(from viewController: UIViewController?) {
+        guard let fromViewController = viewController else { return }
+
         let viewModel = InternalMenuViewModel(appRouter: self)
         let viewController = InternalMenuViewController(viewModel: viewModel)
         let navigationController = UINavigationController(rootViewController: viewController)
-        rootViewController.present(navigationController, animated: true)
+        fromViewController.present(navigationController, animated: true)
     }
 }

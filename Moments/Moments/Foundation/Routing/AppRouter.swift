@@ -12,19 +12,13 @@ protocol AppRouting {
 }
 
 struct AppRouter: AppRouting {
-
-    // 单例
-    static var instance: AppRouter = {
-        AppRouter()
-    }()
-
-    private init() { }
-
     func presentInternalMenu(from viewController: UIViewController?) {
         guard let fromViewController = viewController else { return }
 
-        let viewModel = InternalMenuViewModel(appRouter: self)
-        let viewController = InternalMenuViewController(viewModel: viewModel)
+        let viewController = InternalMenuViewController()
+        let router = InternalMenuRouter(fromController: viewController)
+        let viewModel = InternalMenuViewModel(appRouter: router)
+        viewController.viewModel = viewModel
         let navigationController = UINavigationController(rootViewController: viewController)
         fromViewController.present(navigationController, animated: true)
     }

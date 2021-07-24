@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 #if DEBUG || INTERNAL
 extension UIWindow {
     open override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        let appRoute: AppRouting = AppRouter.instance
+        let appRoute: AppRouting = AppRouter()
         if motion == .motionShake {
             appRoute.presentInternalMenu(from: rootViewController)
         }

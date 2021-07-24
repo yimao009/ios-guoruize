@@ -10,23 +10,14 @@ import RxDataSources
 import SnapKit
 
 class InternalMenuViewController: BaseViewController {
-
-    let viewModel: InternalMenuViewModelType
-
-    init(viewModel: InternalMenuViewModelType) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    var viewModel: InternalMenuViewModelType!
 
     lazy var tableView: UITableView = configure(UITableView(frame: .zero, style: .grouped)) {
         $0.rowHeight = UITableView.automaticDimension
         $0.estimatedRowHeight = 44
 
         $0.register(InternalMenuDescriptionCell.self, forCellReuseIdentifier: InternalMenuItemType.description.rawValue)
+        $0.register(InternalMenuActionTriggerCell.self, forCellReuseIdentifier: InternalMenuItemType.actionTrigger.rawValue)
     }
 
     override func viewDidLoad() {

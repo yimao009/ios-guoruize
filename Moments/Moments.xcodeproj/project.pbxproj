@@ -26,6 +26,10 @@
 		06554C4226AA6E9C007E7B8B /* InternalMenuDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C4126AA6E9C007E7B8B /* InternalMenuDescriptionCell.swift */; };
 		06554C4426AA6EC8007E7B8B /* InternalMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C4326AA6EC8007E7B8B /* InternalMenuCell.swift */; };
 		06554C4926AAB87E007E7B8B /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C4826AAB87E007E7B8B /* UIApplicationExtension.swift */; };
+		06554C7926AACA81007E7B8B /* InternalMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C7826AACA81007E7B8B /* InternalMenuRouter.swift */; };
+		06554C7B26AAD005007E7B8B /* DesignKitDemoItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C7A26AAD005007E7B8B /* DesignKitDemoItemViewModel.swift */; };
+		06554C7D26AAD098007E7B8B /* InternalMenuActionTriggerItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C7C26AAD098007E7B8B /* InternalMenuActionTriggerItemViewModel.swift */; };
+		06554C7F26AAD2F3007E7B8B /* InternalMenuActionTriggerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C7E26AAD2F3007E7B8B /* InternalMenuActionTriggerCell.swift */; };
 		BB63A786EDCDDE31A9FD44D3 /* Pods_Moments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023029A0117D29A1A0604469 /* Pods_Moments.framework */; };
 		BD4C5D9B2830F9E2B16B5D9E /* Pods_MomentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */; };
 /* End PBXBuildFile section */
@@ -84,6 +88,10 @@
 		06554C4126AA6E9C007E7B8B /* InternalMenuDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuDescriptionCell.swift; sourceTree = "<group>"; };
 		06554C4326AA6EC8007E7B8B /* InternalMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuCell.swift; sourceTree = "<group>"; };
 		06554C4826AAB87E007E7B8B /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		06554C7826AACA81007E7B8B /* InternalMenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuRouter.swift; sourceTree = "<group>"; };
+		06554C7A26AAD005007E7B8B /* DesignKitDemoItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignKitDemoItemViewModel.swift; sourceTree = "<group>"; };
+		06554C7C26AAD098007E7B8B /* InternalMenuActionTriggerItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuActionTriggerItemViewModel.swift; sourceTree = "<group>"; };
+		06554C7E26AAD2F3007E7B8B /* InternalMenuActionTriggerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuActionTriggerCell.swift; sourceTree = "<group>"; };
 		0A2810A4939606F05C4A3C6E /* Pods-Moments.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments.appstore.xcconfig"; path = "Target Support Files/Pods-Moments/Pods-Moments.appstore.xcconfig"; sourceTree = "<group>"; };
 		0C3BE388A5D87650497B54DF /* Pods-MomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentsTests.debug.xcconfig"; path = "Target Support Files/Pods-MomentsTests/Pods-MomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MomentsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -266,6 +274,7 @@
 		06554C2E26AA645E007E7B8B /* InternalMenu */ = {
 			isa = PBXGroup;
 			children = (
+				06554C7726AACA6A007E7B8B /* Routes */,
 				06554C2F26AA6465007E7B8B /* ViewModel */,
 				06554C3026AA6472007E7B8B /* Views */,
 			);
@@ -275,6 +284,8 @@
 		06554C2F26AA6465007E7B8B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				06554C7A26AAD005007E7B8B /* DesignKitDemoItemViewModel.swift */,
+				06554C7C26AAD098007E7B8B /* InternalMenuActionTriggerItemViewModel.swift */,
 				06554C3F26AA6BCE007E7B8B /* InternalMenuDescriptionItemViewModel.swift */,
 				06554C3D26AA68F2007E7B8B /* InternalMenuItemViewModel.swift */,
 				06554C3926AA66FC007E7B8B /* InternalMenuSection.swift */,
@@ -286,6 +297,7 @@
 		06554C3026AA6472007E7B8B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				06554C7E26AAD2F3007E7B8B /* InternalMenuActionTriggerCell.swift */,
 				06554C4326AA6EC8007E7B8B /* InternalMenuCell.swift */,
 				06554C4126AA6E9C007E7B8B /* InternalMenuDescriptionCell.swift */,
 				06554C3526AA65A6007E7B8B /* InternalMenuViewController.swift */,
@@ -299,6 +311,14 @@
 				06554C4826AAB87E007E7B8B /* UIApplicationExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		06554C7726AACA6A007E7B8B /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				06554C7826AACA81007E7B8B /* InternalMenuRouter.swift */,
+			);
+			path = Routes;
 			sourceTree = "<group>";
 		};
 		5590A371016DF6E7A106A86C /* Frameworks */ = {
@@ -563,11 +583,15 @@
 				06554BCA26A95FF8007E7B8B /* AppDelegate.swift in Sources */,
 				06554C2C26AA6097007E7B8B /* AppRouter.swift in Sources */,
 				06554C3426AA6505007E7B8B /* BaseViewController.swift in Sources */,
+				06554C7B26AAD005007E7B8B /* DesignKitDemoItemViewModel.swift in Sources */,
 				06554C2826AA5E43007E7B8B /* Functions.swift in Sources */,
+				06554C7F26AAD2F3007E7B8B /* InternalMenuActionTriggerCell.swift in Sources */,
+				06554C7D26AAD098007E7B8B /* InternalMenuActionTriggerItemViewModel.swift in Sources */,
 				06554C4426AA6EC8007E7B8B /* InternalMenuCell.swift in Sources */,
 				06554C4226AA6E9C007E7B8B /* InternalMenuDescriptionCell.swift in Sources */,
 				06554C4026AA6BCE007E7B8B /* InternalMenuDescriptionItemViewModel.swift in Sources */,
 				06554C3E26AA68F2007E7B8B /* InternalMenuItemViewModel.swift in Sources */,
+				06554C7926AACA81007E7B8B /* InternalMenuRouter.swift in Sources */,
 				06554C3A26AA66FC007E7B8B /* InternalMenuSection.swift in Sources */,
 				06554C3626AA65A6007E7B8B /* InternalMenuViewController.swift in Sources */,
 				06554C3826AA664C007E7B8B /* InternalMenuViewModel.swift in Sources */,

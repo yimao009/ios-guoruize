@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Moments
+
+  Created by guoruize on 2021/7/24.
+  
+*/
+
+// Internal Menu
+"internalMenuTypography" = "Typography";
+"internalMenuColors" = "Colors";
+"internalMenuAvatars" = "Avatars";

@@ -31,6 +31,8 @@
 		06554C7D26AAD098007E7B8B /* InternalMenuActionTriggerItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C7C26AAD098007E7B8B /* InternalMenuActionTriggerItemViewModel.swift */; };
 		06554C7F26AAD2F3007E7B8B /* InternalMenuActionTriggerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C7E26AAD2F3007E7B8B /* InternalMenuActionTriggerCell.swift */; };
 		06F4C6E726ABCE8600445E23 /* DesignKitDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C6E626ABCE8600445E23 /* DesignKitDemoViewController.swift */; };
+		06F4C6F026AC14E000445E23 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06F4C6F226AC14E000445E23 /* Localizable.strings */; };
+		06F4C6F626AC1CBC00445E23 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C6F526AC1CBC00445E23 /* Strings.swift */; };
 		BB63A786EDCDDE31A9FD44D3 /* Pods_Moments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023029A0117D29A1A0604469 /* Pods_Moments.framework */; };
 		BD4C5D9B2830F9E2B16B5D9E /* Pods_MomentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */; };
 /* End PBXBuildFile section */
@@ -94,6 +96,9 @@
 		06554C7C26AAD098007E7B8B /* InternalMenuActionTriggerItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuActionTriggerItemViewModel.swift; sourceTree = "<group>"; };
 		06554C7E26AAD2F3007E7B8B /* InternalMenuActionTriggerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuActionTriggerCell.swift; sourceTree = "<group>"; };
 		06F4C6E626ABCE8600445E23 /* DesignKitDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignKitDemoViewController.swift; sourceTree = "<group>"; };
+		06F4C6F126AC14E000445E23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		06F4C6F326AC152100445E23 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		06F4C6F526AC1CBC00445E23 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		0A2810A4939606F05C4A3C6E /* Pods-Moments.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments.appstore.xcconfig"; path = "Target Support Files/Pods-Moments/Pods-Moments.appstore.xcconfig"; sourceTree = "<group>"; };
 		0C3BE388A5D87650497B54DF /* Pods-MomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentsTests.debug.xcconfig"; path = "Target Support Files/Pods-MomentsTests/Pods-MomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MomentsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +165,8 @@
 				06554BFA26A9848F007E7B8B /* Configurations */,
 				06554C2D26AA644D007E7B8B /* Features */,
 				06554C2526AA5BFB007E7B8B /* Foundation */,
+				06F4C6F426AC1CA600445E23 /* Generated */,
+				06F4C6ED26AC13EF00445E23 /* Resources */,
 				06554BC926A95FF8007E7B8B /* AppDelegate.swift */,
 				06554BD226A95FFA007E7B8B /* Assets.xcassets */,
 				06554BD726A95FFA007E7B8B /* Info.plist */,
@@ -324,6 +331,22 @@
 			path = Routes;
 			sourceTree = "<group>";
 		};
+		06F4C6ED26AC13EF00445E23 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				06F4C6F226AC14E000445E23 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		06F4C6F426AC1CA600445E23 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				06F4C6F526AC1CBC00445E23 /* Strings.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		5590A371016DF6E7A106A86C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,10 +381,11 @@
 			buildPhases = (
 				09352F8976F1272FC2767D73 /* [CP] Check Pods Manifest.lock */,
 				06554BC226A95FF8007E7B8B /* Sources */,
-				06554BF926A9796E007E7B8B /* Run SwiftLint */,
 				06554BC326A95FF8007E7B8B /* Frameworks */,
 				06554BC426A95FF8007E7B8B /* Resources */,
 				B22A83D526B67CDD779B3B68 /* [CP] Embed Pods Frameworks */,
+				06554BF926A9796E007E7B8B /* Run SwiftLint */,
+				06F4C6EC26AC132900445E23 /* Run SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -439,6 +463,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 06554BBD26A95FF7007E7B8B;
 			productRefGroup = 06554BC726A95FF8007E7B8B /* Products */;
@@ -459,6 +484,7 @@
 			files = (
 				06554BD326A95FFA007E7B8B /* Assets.xcassets in Resources */,
 				06554BD626A95FFA007E7B8B /* LaunchScreen.storyboard in Resources */,
+				06F4C6F026AC14E000445E23 /* Localizable.strings in Resources */,
 				06554BD126A95FF8007E7B8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +523,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		06F4C6EC26AC132900445E23 /* Run SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftGen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
 		};
 		09352F8976F1272FC2767D73 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -600,6 +644,7 @@
 				06554C3626AA65A6007E7B8B /* InternalMenuViewController.swift in Sources */,
 				06554C3826AA664C007E7B8B /* InternalMenuViewModel.swift in Sources */,
 				06554BCC26A95FF8007E7B8B /* SceneDelegate.swift in Sources */,
+				06F4C6F626AC1CBC00445E23 /* Strings.swift in Sources */,
 				06554C4926AAB87E007E7B8B /* UIApplicationExtension.swift in Sources */,
 				06554BCE26A95FF8007E7B8B /* ViewController.swift in Sources */,
 			);
@@ -653,6 +698,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		06F4C6F226AC14E000445E23 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06F4C6F126AC14E000445E23 /* en */,
+				06F4C6F326AC152100445E23 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -661,6 +715,7 @@
 			baseConfigurationReference = 06554C0126A9848F007E7B8B /* DebugProject.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -782,6 +837,7 @@
 			baseConfigurationReference = 06554BFB26A9848F007E7B8B /* InternalProject.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -897,6 +953,7 @@
 			baseConfigurationReference = 06554BFE26A9848F007E7B8B /* AppStoreProject.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

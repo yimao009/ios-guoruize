@@ -30,7 +30,11 @@ private extension DesignKitDemoViewController {
             scrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)])
 
-        let rootStackView = configure(UIStackView(arrangedSubviews: [buildTypography(), buildColors(), buildAvatars()])) {
+        let rootStackView = configure(UIStackView(arrangedSubviews: [
+            buildTypography(),
+            buildColors(),
+            buildAvatars()
+        ])) {
             $0.translatesAutoresizingMaskIntoConstraints = false
             $0.axis = .vertical
             $0.alignment = .leading
@@ -60,11 +64,12 @@ private extension DesignKitDemoViewController {
             ("title5", UIFont.designKit.title5),
         ]
 
-        let title = UILabel()
-        title.text = "# Typography"
-        title.font = UIFont.designKit.title1
+        let title = configure(UILabel()) {
+            $0.text = "# Typography"
+            $0.font = UIFont.designKit.title1
+        }
 
-        let stack = configure(UIStackView(arrangedSubviews: [title])) {
+        let stackView = configure(UIStackView(arrangedSubviews: [title])) {
             $0.axis = .vertical
             $0.spacing = 8
         }
@@ -75,9 +80,9 @@ private extension DesignKitDemoViewController {
                 $0.text = item.0
                 $0.setDynamicFont(item.1)
             }
-            stack.addArrangedSubview(label)
+            stackView.addArrangedSubview(label)
         }
-        return stack
+        return stackView
     }
 
     func buildColors() -> UIView {
@@ -96,7 +101,7 @@ private extension DesignKitDemoViewController {
             $0.font = UIFont.designKit.title1
         }
 
-        let stack = configure(UIStackView(arrangedSubviews: [title])) {
+        let stackView = configure(UIStackView(arrangedSubviews: [title])) {
             $0.axis = .vertical
             $0.spacing = 8
         }
@@ -108,9 +113,9 @@ private extension DesignKitDemoViewController {
                 $0.textColor = UIColor.designKit.primaryText
                 $0.backgroundColor = item.1
             }
-            stack.addArrangedSubview(label)
+            stackView.addArrangedSubview(label)
         }
-        return stack
+        return stackView
     }
 
     func buildAvatars() -> UIView {
@@ -126,7 +131,7 @@ private extension DesignKitDemoViewController {
             $0.font = UIFont.designKit.title1
         }
 
-        let stack = configure(UIStackView(arrangedSubviews: [title])) {
+        let stackView = configure(UIStackView(arrangedSubviews: [title])) {
             $0.spacing = 8
             $0.axis = .vertical
         }
@@ -145,10 +150,10 @@ private extension DesignKitDemoViewController {
             imageView.snp.makeConstraints {
                 $0.width.height.equalTo(length)
             }
-            stack.addArrangedSubview(imageView)
+            stackView.addArrangedSubview(imageView)
         }
 
-        return stack
+        return stackView
     }
 
 }

@@ -60,7 +60,6 @@
 		06554BC926A95FF8007E7B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06554BCB26A95FF8007E7B8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		06554BCD26A95FF8007E7B8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		06554BD026A95FF8007E7B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06554BD226A95FFA007E7B8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06554BD526A95FFA007E7B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06554BD726A95FFA007E7B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,6 +98,7 @@
 		06F4C6F126AC14E000445E23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		06F4C6F326AC152100445E23 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		06F4C6F526AC1CBC00445E23 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		06F4C70026AC215F00445E23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A2810A4939606F05C4A3C6E /* Pods-Moments.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments.appstore.xcconfig"; path = "Target Support Files/Pods-Moments/Pods-Moments.appstore.xcconfig"; sourceTree = "<group>"; };
 		0C3BE388A5D87650497B54DF /* Pods-MomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentsTests.debug.xcconfig"; path = "Target Support Files/Pods-MomentsTests/Pods-MomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MomentsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,8 +170,6 @@
 				06554BC926A95FF8007E7B8B /* AppDelegate.swift */,
 				06554BD226A95FFA007E7B8B /* Assets.xcassets */,
 				06554BD726A95FFA007E7B8B /* Info.plist */,
-				06554BD426A95FFA007E7B8B /* LaunchScreen.storyboard */,
-				06554BCF26A95FF8007E7B8B /* Main.storyboard */,
 				06554BCB26A95FF8007E7B8B /* SceneDelegate.swift */,
 				06554BCD26A95FF8007E7B8B /* ViewController.swift */,
 			);
@@ -334,6 +332,8 @@
 		06F4C6ED26AC13EF00445E23 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				06554BCF26A95FF8007E7B8B /* Main.storyboard */,
+				06554BD426A95FFA007E7B8B /* LaunchScreen.storyboard */,
 				06F4C6F226AC14E000445E23 /* Localizable.strings */,
 			);
 			path = Resources;
@@ -685,7 +685,7 @@
 		06554BCF26A95FF8007E7B8B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				06554BD026A95FF8007E7B8B /* Base */,
+				06F4C70026AC215F00445E23 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

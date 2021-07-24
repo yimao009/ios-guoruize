@@ -9,17 +9,10 @@ import UIKit
 
 class InternalMenuActionTriggerCell: InternalMenuCell<InternalMenuActionTriggerItemViewModel> {
 
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
     var item: InternalMenuActionTriggerItemViewModel?
 
     override func update(_ item: InternalMenuActionTriggerItemViewModel) {
+        accessoryType = .disclosureIndicator
         self.item = item
         textLabel?.text = item.title
         textLabel?.textColor = item.titleColor

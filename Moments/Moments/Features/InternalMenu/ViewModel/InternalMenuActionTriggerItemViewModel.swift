@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DesignKit
 
 class InternalMenuActionTriggerItemViewModel: InternalMenuItemViewModel {
     var type: InternalMenuItemType {
@@ -15,7 +16,7 @@ class InternalMenuActionTriggerItemViewModel: InternalMenuItemViewModel {
     func select() { }
 
     var title: String { "" }
-    var titleColor: UIColor { .black }
+    var titleColor: UIColor { return UIColor.designKit.primaryText }
     var textAlignment: NSTextAlignment { .left }
     var detailAttributedText: NSAttributedString? { nil }
     var icon: UIImage? { nil }

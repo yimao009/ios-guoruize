@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 
 final class DesignKitDemoViewController: UIViewController {
 
@@ -30,7 +30,7 @@ private extension DesignKitDemoViewController {
             scrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)])
 
-        let rootStackView = configure(UIStackView(arrangedSubviews: [buildTypography(), buildColors()])) {
+        let rootStackView = configure(UIStackView(arrangedSubviews: [buildTypography(), buildColors(), buildAvatars()])) {
             $0.translatesAutoresizingMaskIntoConstraints = false
             $0.axis = .vertical
             $0.alignment = .leading
@@ -110,6 +110,44 @@ private extension DesignKitDemoViewController {
             }
             stack.addArrangedSubview(label)
         }
+        return stack
+    }
+
+    func buildAvatars() -> UIView {
+        // Got the URLs from https://uifaces.co/api-key
+        let items = [URL(string: "https://images.generated.photos/SZ43KV-Oo26-wpPUM7zDLo19CpGFH0eBnjegQFtvaUc/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zLzA4/NTUzMzguanBn.jpg"),
+                     URL(string: "https://randomuser.me/api/portraits/women/68.jpg"),
+                     URL(string: "https://uifaces.co/our-content/donated/Si9Qv42B.jpg"),
+                     URL(string: "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEzNjAzMTgzMV5BMl5BanBnXkFtZTcwNjU2NjA2NQ@@._V1_UY256_CR11,0,172,256_AL_.jpg"),
+                     URL(string: "https://uifaces.co/our-content/donated/fID5-1BV.jpg")
+                 ]
+        let title = configure(UILabel()) {
+            $0.text = "# Avatars"
+            $0.font = UIFont.designKit.title1
+        }
+
+        let stack = configure(UIStackView(arrangedSubviews: [title])) {
+            $0.spacing = 8
+            $0.axis = .vertical
+        }
+
+        items.forEach {
+            let item = $0
+
+            let imageView = configure(UIImageView()) {
+                $0.asAvatar(cornerRadius: 12)
+                $0.contentMode = .scaleAspectFill
+                $0.accessibilityIgnoresInvertColors = false
+                $0.kf.setImage(with: item)
+            }
+
+            let length: CGFloat = 128
+            imageView.snp.makeConstraints {
+                $0.width.height.equalTo(length)
+            }
+            stack.addArrangedSubview(imageView)
+        }
+
         return stack
     }
 

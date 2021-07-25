@@ -332,9 +332,9 @@
 		06F4C6ED26AC13EF00445E23 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				06554BCF26A95FF8007E7B8B /* Main.storyboard */,
 				06554BD426A95FFA007E7B8B /* LaunchScreen.storyboard */,
 				06F4C6F226AC14E000445E23 /* Localizable.strings */,
+				06554BCF26A95FF8007E7B8B /* Main.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";

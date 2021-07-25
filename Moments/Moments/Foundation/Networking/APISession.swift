@@ -6,14 +6,11 @@
 //
 
 import Foundation
+import Alamofire
 import RxSwift
 
-typealias Parameters = [String: Any]
-typealias HTTPHeaders = [String: String]
-
-
 public enum APISessionError: Error {
-    case networkError
+    case networkError(error: Error, code: Int)
     case invalidJSON
     case noData
 }
@@ -24,48 +21,63 @@ protocol APISession {
     func post(_ path: String, parameters: Parameters?, headers: HTTPHeaders) -> Observable<T>
 }
 
-
 extension APISession {
+
+    var defaultHeaders: HTTPHeaders {
+        // swiftlint:disable no_hardcoded_strings
+        let headers: HTTPHeaders = [
+            "x-app-platform": "iOS",
+            "x-app-version": UIApplication.appVersion,
+            "x-os-version": UIDevice.current.systemVersion
+        ]
+        return headers
+    }
+
     var baseURL: URL {
         API.baseURL
     }
 
-    func post(_ path: String, parameters: Parameters?, headers: HTTPHeaders) -> Observable<T> {
-        return Observable.create { observer -> Disposable in
-            let url = baseURL.appendingPathComponent(path)
-
-            let task = URLSession.shared.dataTask(with: url) { data, response, error in
-                if let error = error {
-                    observer.onError(error) // 错误发送
-                    return
-                }
-
-                guard let data = data else {
-                    observer.onError(APISessionError.noData) // 没有数据
-                    return
-                }
-
-                guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                    observer.onError(APISessionError.networkError)
-                    return 
-                }
-
-                do {
-                    let decoder = JSONDecoder()
-                    let model = try decoder.decode(T.self, from: data)
-                    observer.onNext(model)
-                    observer.onCompleted()
-                } catch {
-                    observer.onError(APISessionError.invalidJSON)
-                }
-            }
-            task.resume()
-
-            return Disposables.create {
-                task.cancel()
-            }
-        }
+    func post(_ path: String, parameters: Parameters? = nil, headers: HTTPHeaders = [:]) -> Observable<T> {
+        return post(path, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
     }
 
 }
 
+private extension APISession {
+    func post(_ path: String, method: HTTPMethod, parameters: Parameters?, encoding: ParameterEncoding, headers: HTTPHeaders) -> Observable<T> {
+        let url = baseURL.appendingPathComponent(path)
+        var allHeaders = defaultHeaders
+        headers.forEach {  allHeaders.add($0) }
+
+        return Observable.create { observer -> Disposable in
+            let request = AF.request(url, method: method, parameters: parameters, encoding: encoding, headers: allHeaders, interceptor: nil, requestModifier: nil)
+                .validate()
+                .responseJSON { response in
+                    switch response.result {
+                    case .success:
+                        guard let data = response.data else {
+                            observer.onError(response.error ?? APISessionError.noData)
+                            return
+                        }
+                        do {
+                            let model = try JSONDecoder().decode(T.self, from: data)
+                            observer.onNext(model)
+                        } catch {
+                            observer.onError(error)
+                        }
+                    case .failure(let error):
+                        if let statusCode = response.response?.statusCode {
+                            observer.onError(APISessionError.networkError(error: error, code: statusCode))
+                        } else {
+                            observer.onError(error)
+                        }
+                    }
+                }
+
+            return Disposables.create {
+                request.cancel()
+            }
+        }
+
+    }
+}

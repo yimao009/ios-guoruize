@@ -380,11 +380,11 @@
 			buildConfigurationList = 06554BF026A95FFB007E7B8B /* Build configuration list for PBXNativeTarget "Moments" */;
 			buildPhases = (
 				09352F8976F1272FC2767D73 /* [CP] Check Pods Manifest.lock */,
+				06F4C6EC26AC132900445E23 /* Run SwiftGen */,
 				06554BC226A95FF8007E7B8B /* Sources */,
+				06554BF926A9796E007E7B8B /* Run SwiftLint */,
 				06554BC326A95FF8007E7B8B /* Frameworks */,
 				06554BC426A95FF8007E7B8B /* Resources */,
-				06554BF926A9796E007E7B8B /* Run SwiftLint */,
-				06F4C6EC26AC132900445E23 /* Run SwiftGen */,
 				D615538FF55EBDCB9F45FD0B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -522,7 +522,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		06F4C6EC26AC132900445E23 /* Run SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;

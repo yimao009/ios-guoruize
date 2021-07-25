@@ -9,9 +9,7 @@ import UIKit
 
 /// 显示版本的cell
 class InternalMenuDescriptionCell: InternalMenuCell<InternalMenuDescriptionItemViewModel> {
-
     override func update(_ item: InternalMenuDescriptionItemViewModel) {
         textLabel?.text = item.title
     }
-
 }

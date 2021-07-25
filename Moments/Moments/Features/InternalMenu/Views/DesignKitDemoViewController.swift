@@ -9,7 +9,6 @@ import UIKit
 import Kingfisher
 
 final class DesignKitDemoViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -52,20 +51,22 @@ private extension DesignKitDemoViewController {
             rootStackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor)])
     }
 
-
     func buildTypography() -> UIView {
-        let items = [
-            ("display1", UIFont.designKit.display1),
-            ("display2", UIFont.designKit.display2),
-            ("title1", UIFont.designKit.title1),
-            ("title2", UIFont.designKit.title2),
-            ("title3", UIFont.designKit.title3),
-            ("title4", UIFont.designKit.title4),
-            ("title5", UIFont.designKit.title5),
-        ]
+        let items = [("display1", UIFont.designKit.display1),
+                     ("display2", UIFont.designKit.display2),
+                     ("title1", UIFont.designKit.title1),
+                     ("title2", UIFont.designKit.title2),
+                     ("title3", UIFont.designKit.title3),
+                     ("title4", UIFont.designKit.title4),
+                     ("title5", UIFont.designKit.title5),
+                     ("bodyBold", UIFont.designKit.bodyBold),
+                     ("body", UIFont.designKit.body),
+                     ("captionBold", UIFont.designKit.captionBold),
+                     ("caption", UIFont.designKit.caption),
+                     ("small", UIFont.designKit.small)]
 
         let title = configure(UILabel()) {
-            $0.text = L10n.internalMenuTypography
+            $0.text = L10n.InternalMenu.typography
             $0.font = UIFont.designKit.title1
         }
 
@@ -87,17 +88,17 @@ private extension DesignKitDemoViewController {
 
     func buildColors() -> UIView {
         let items = [("primary", UIColor.designKit.primary),
-                 ("background", UIColor.designKit.background),
-                 ("secondaryBackground", UIColor.designKit.secondaryBackground),
-                 ("tertiaryBackground", UIColor.designKit.tertiaryBackground),
-                 ("line", UIColor.designKit.line),
-                 ("primaryText", UIColor.designKit.primaryText),
-                 ("secondaryText", UIColor.designKit.secondaryText),
-                 ("tertiaryText", UIColor.designKit.tertiaryText),
-                 ("quaternaryText", UIColor.designKit.quaternaryText)]
+                     ("background", UIColor.designKit.background),
+                     ("secondaryBackground", UIColor.designKit.secondaryBackground),
+                     ("tertiaryBackground", UIColor.designKit.tertiaryBackground),
+                     ("line", UIColor.designKit.line),
+                     ("primaryText", UIColor.designKit.primaryText),
+                     ("secondaryText", UIColor.designKit.secondaryText),
+                     ("tertiaryText", UIColor.designKit.tertiaryText),
+                     ("quaternaryText", UIColor.designKit.quaternaryText)]
 
         let title = configure(UILabel()) {
-            $0.text = L10n.internalMenuColors
+            $0.text = L10n.InternalMenu.colors
             $0.font = UIFont.designKit.title1
         }
 
@@ -127,7 +128,7 @@ private extension DesignKitDemoViewController {
                      URL(string: "https://uifaces.co/our-content/donated/fID5-1BV.jpg")
                  ]
         let title = configure(UILabel()) {
-            $0.text = L10n.internalMenuAvatars
+            $0.text = L10n.InternalMenu.avatars
             $0.font = UIFont.designKit.title1
         }
 
@@ -155,6 +156,4 @@ private extension DesignKitDemoViewController {
 
         return stackView
     }
-
 }
-

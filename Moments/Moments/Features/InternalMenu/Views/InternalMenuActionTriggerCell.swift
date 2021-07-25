@@ -8,7 +8,6 @@
 import UIKit
 
 class InternalMenuActionTriggerCell: InternalMenuCell<InternalMenuActionTriggerItemViewModel> {
-
     var item: InternalMenuActionTriggerItemViewModel?
 
     override func update(_ item: InternalMenuActionTriggerItemViewModel) {

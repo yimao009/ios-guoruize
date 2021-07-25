@@ -8,7 +8,6 @@
 import Foundation
 
 struct InternalMenuDescriptionItemViewModel: InternalMenuItemViewModel {
-
     let title: String
 
     var type: InternalMenuItemType {

@@ -30,7 +30,6 @@ final class InternalMenuViewController: BaseViewController {
 
         setupLayout()
         setupBindings()
-
     }
 
     func setupLayout() {
@@ -48,11 +47,11 @@ final class InternalMenuViewController: BaseViewController {
                 cell.update(with: item)
             }
             return cell
-        }, titleForHeaderInSection: { dataSource, section in
+            }, titleForHeaderInSection: { dataSource, section in
             return dataSource.sectionModels[section].title
-        }, titleForFooterInSection: { dataSource, section in
+            }, titleForFooterInSection: { dataSource, section in
             return dataSource.sectionModels[section].footer
-        })
+            })
 
         viewModel.sections
             .bind(to: tableView.rx.items(dataSource: dataSource))

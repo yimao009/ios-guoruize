@@ -8,7 +8,6 @@
 import UIKit
 
 public extension UIColor {
-
     static let designKit = DesignKitPalette.self
 
     enum DesignKitPalette {
@@ -25,10 +24,8 @@ public extension UIColor {
         private static func dynamicColor(light: UIColor, dark: UIColor) -> UIColor {
             return UIColor { $0.userInterfaceStyle == .light ? light : dark }
         }
-
     }
 }
-
 
 private extension UIColor {
     convenience init(hex: Int) {

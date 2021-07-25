@@ -12,7 +12,6 @@ protocol InternalMenuRouting {
 }
 
 struct InternalMenuRouter: InternalMenuRouting {
-
     weak var fromController: UIViewController?
 
     init(fromController: UIViewController) {

@@ -14,14 +14,14 @@ protocol InternalMenuViewModelType {
 }
 
 class InternalMenuViewModel: InternalMenuViewModelType {
-    var title = "Area 51" // 页面标题
+    var title = L10n.InternalMenu.area51 // 页面标题
     var sections: Observable<[InternalMenuSection]> // 一共有多少个sections
 
     init(appRouter: InternalMenuRouting) {
-        let appVersion = "Version \((Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String) ?? "1.0")"
-        let appName = "AppName \(Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String ?? "Get Name Error")"
+        let appVersion = "\(L10n.InternalMenu.version) \((Bundle.main.object(forInfoDictionaryKey: L10n.InternalMenu.cfBundleVersion) as? String) ?? "1.0")"
+        let appName = "\(L10n.InternalMenu.appName) \(Bundle.main.object(forInfoDictionaryKey: L10n.InternalMenu.cfBundleName) as? String ?? "0.0")"
         let infoSection = InternalMenuSection(
-            title: "General Info",
+            title: L10n.InternalMenu.generalInfo,
             items: [
                 InternalMenuDescriptionItemViewModel(title: appVersion),
                 InternalMenuDescriptionItemViewModel(title: appName)
@@ -29,7 +29,7 @@ class InternalMenuViewModel: InternalMenuViewModelType {
         )
 
         let designKitSection = InternalMenuSection(
-            title: "DesignKit Demo",
+            title: L10n.InternalMenu.designKitDemo,
             items: [
                 DesignKitDemoItemViewModel(router: appRouter)
             ]

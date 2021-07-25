@@ -12,12 +12,12 @@ protocol InternalMenuItemViewing {
 }
 
 class InternalMenuCell<T: InternalMenuItemViewModel>: UITableViewCell, InternalMenuItemViewing {
-
     func update(with item: InternalMenuItemViewModel) {
         (item as? T).map { update($0) }
     }
 
+    // swiftlint:disable unavailable_function
     func update(_ item: T) {
-        fatalError("Subclass has to implement this function")
+        fatalError(L10n.Development.fatalErrorInitCoderNotImplemented)
     }
 }

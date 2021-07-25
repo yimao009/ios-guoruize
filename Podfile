@@ -10,8 +10,8 @@ use_frameworks!
 inhibit_all_warnings!
 
 def dev_pods
-  pod 'SwiftLint', '0.40.3', configurations: ['Debug']
-  pod 'SwiftGen', '6.4.0', configurations: ['Debug']
+    pod 'SwiftLint', '0.40.3', configurations: ['Debug']
+    pod 'SwiftGen', '6.4.0', configurations: ['Debug']
 end
 
 def core_pods

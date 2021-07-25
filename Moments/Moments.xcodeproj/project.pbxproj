@@ -383,9 +383,9 @@
 				06554BC226A95FF8007E7B8B /* Sources */,
 				06554BC326A95FF8007E7B8B /* Frameworks */,
 				06554BC426A95FF8007E7B8B /* Resources */,
-				B22A83D526B67CDD779B3B68 /* [CP] Embed Pods Frameworks */,
 				06554BF926A9796E007E7B8B /* Run SwiftLint */,
 				06F4C6EC26AC132900445E23 /* Run SwiftGen */,
+				D615538FF55EBDCB9F45FD0B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -581,7 +581,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MomentsTests/Pods-MomentsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B22A83D526B67CDD779B3B68 /* [CP] Embed Pods Frameworks */ = {
+		D615538FF55EBDCB9F45FD0B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

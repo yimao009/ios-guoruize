@@ -36,6 +36,10 @@
 		06F4C76C26AD273600445E23 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C76B26AD273600445E23 /* API.swift */; };
 		06F4C76E26AD276E00445E23 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C76D26AD276E00445E23 /* Configuration.swift */; };
 		06F4C77026AD293200445E23 /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C76F26AD293200445E23 /* APISession.swift */; };
+		06F4C77426AD398400445E23 /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C77326AD398400445E23 /* Moment.swift */; };
+		06F4C77626AD398F00445E23 /* MomentsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C77526AD398F00445E23 /* MomentsDetails.swift */; };
+		06F4C77826AD399800445E23 /* MomentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C77726AD399800445E23 /* MomentType.swift */; };
+		06F4C77A26AD399F00445E23 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C77926AD399F00445E23 /* UserDetails.swift */; };
 		BB63A786EDCDDE31A9FD44D3 /* Pods_Moments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023029A0117D29A1A0604469 /* Pods_Moments.framework */; };
 		BD4C5D9B2830F9E2B16B5D9E /* Pods_MomentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */; };
 /* End PBXBuildFile section */
@@ -106,6 +110,10 @@
 		06F4C76B26AD273600445E23 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		06F4C76D26AD276E00445E23 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		06F4C76F26AD293200445E23 /* APISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
+		06F4C77326AD398400445E23 /* Moment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
+		06F4C77526AD398F00445E23 /* MomentsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsDetails.swift; sourceTree = "<group>"; };
+		06F4C77726AD399800445E23 /* MomentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentType.swift; sourceTree = "<group>"; };
+		06F4C77926AD399F00445E23 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		0A2810A4939606F05C4A3C6E /* Pods-Moments.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments.appstore.xcconfig"; path = "Target Support Files/Pods-Moments/Pods-Moments.appstore.xcconfig"; sourceTree = "<group>"; };
 		0C3BE388A5D87650497B54DF /* Pods-MomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentsTests.debug.xcconfig"; path = "Target Support Files/Pods-MomentsTests/Pods-MomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MomentsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				06554C2E26AA645E007E7B8B /* InternalMenu */,
+				06F4C77126AD395600445E23 /* Moments */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -364,6 +373,25 @@
 				06F4C76F26AD293200445E23 /* APISession.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		06F4C77126AD395600445E23 /* Moments */ = {
+			isa = PBXGroup;
+			children = (
+				06F4C77226AD397900445E23 /* Model */,
+			);
+			path = Moments;
+			sourceTree = "<group>";
+		};
+		06F4C77226AD397900445E23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				06F4C77326AD398400445E23 /* Moment.swift */,
+				06F4C77526AD398F00445E23 /* MomentsDetails.swift */,
+				06F4C77726AD399800445E23 /* MomentType.swift */,
+				06F4C77926AD399F00445E23 /* UserDetails.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5590A371016DF6E7A106A86C /* Frameworks */ = {
@@ -665,9 +693,13 @@
 				06554C3A26AA66FC007E7B8B /* InternalMenuSection.swift in Sources */,
 				06554C3626AA65A6007E7B8B /* InternalMenuViewController.swift in Sources */,
 				06554C3826AA664C007E7B8B /* InternalMenuViewModel.swift in Sources */,
+				06F4C77426AD398400445E23 /* Moment.swift in Sources */,
+				06F4C77626AD398F00445E23 /* MomentsDetails.swift in Sources */,
+				06F4C77826AD399800445E23 /* MomentType.swift in Sources */,
 				06554BCC26A95FF8007E7B8B /* SceneDelegate.swift in Sources */,
 				06F4C6F626AC1CBC00445E23 /* Strings.swift in Sources */,
 				06554C4926AAB87E007E7B8B /* UIApplicationExtension.swift in Sources */,
+				06F4C77A26AD399F00445E23 /* UserDetails.swift in Sources */,
 				06554BCE26A95FF8007E7B8B /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

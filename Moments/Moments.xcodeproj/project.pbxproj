@@ -45,6 +45,7 @@
 		06F4C79626AE701600445E23 /* MomentsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C79526AE701600445E23 /* MomentsListViewModel.swift */; };
 		06F4C79926AE704A00445E23 /* ListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C79826AE704A00445E23 /* ListItemViewModel.swift */; };
 		06F4C79B26AE705200445E23 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C79A26AE705200445E23 /* ListViewModel.swift */; };
+		06F4C79D26AE752E00445E23 /* UserProfileListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C79C26AE752E00445E23 /* UserProfileListItemViewModel.swift */; };
 		BB63A786EDCDDE31A9FD44D3 /* Pods_Moments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023029A0117D29A1A0604469 /* Pods_Moments.framework */; };
 		BD4C5D9B2830F9E2B16B5D9E /* Pods_MomentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */; };
 /* End PBXBuildFile section */
@@ -124,6 +125,7 @@
 		06F4C79526AE701600445E23 /* MomentsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsListViewModel.swift; sourceTree = "<group>"; };
 		06F4C79826AE704A00445E23 /* ListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewModel.swift; sourceTree = "<group>"; };
 		06F4C79A26AE705200445E23 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		06F4C79C26AE752E00445E23 /* UserProfileListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileListItemViewModel.swift; sourceTree = "<group>"; };
 		0A2810A4939606F05C4A3C6E /* Pods-Moments.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments.appstore.xcconfig"; path = "Target Support Files/Pods-Moments/Pods-Moments.appstore.xcconfig"; sourceTree = "<group>"; };
 		0C3BE388A5D87650497B54DF /* Pods-MomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentsTests.debug.xcconfig"; path = "Target Support Files/Pods-MomentsTests/Pods-MomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MomentsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -428,6 +430,7 @@
 			isa = PBXGroup;
 			children = (
 				06F4C79526AE701600445E23 /* MomentsListViewModel.swift */,
+				06F4C79C26AE752E00445E23 /* UserProfileListItemViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -752,6 +755,7 @@
 				06F4C6F626AC1CBC00445E23 /* Strings.swift in Sources */,
 				06554C4926AAB87E007E7B8B /* UIApplicationExtension.swift in Sources */,
 				06F4C77A26AD399F00445E23 /* UserDetails.swift in Sources */,
+				06F4C79D26AE752E00445E23 /* UserProfileListItemViewModel.swift in Sources */,
 				06554BCE26A95FF8007E7B8B /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

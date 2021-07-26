@@ -48,8 +48,9 @@
 		06F4C79D26AE752E00445E23 /* UserProfileListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C79C26AE752E00445E23 /* UserProfileListItemViewModel.swift */; };
 		06F4C7A026AE761F00445E23 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C79F26AE761F00445E23 /* BaseTableViewCell.swift */; };
 		06F4C7A226AE763200445E23 /* ListItemComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C7A126AE763200445E23 /* ListItemComponent.swift */; };
-		06F4C7A526AE834E00445E23 /* UserProfileListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C7A426AE834E00445E23 /* UserProfileListItemCell.swift */; };
 		06F4C7A726AE83B100445E23 /* UserProfileListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C7A626AE83B100445E23 /* UserProfileListItemView.swift */; };
+		06F4C7A926AE8D9C00445E23 /* BaseListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C7A826AE8D9C00445E23 /* BaseListItemView.swift */; };
+		06F4C7AB26AE8EB400445E23 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C7AA26AE8EB400445E23 /* ListItemView.swift */; };
 		BB63A786EDCDDE31A9FD44D3 /* Pods_Moments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023029A0117D29A1A0604469 /* Pods_Moments.framework */; };
 		BD4C5D9B2830F9E2B16B5D9E /* Pods_MomentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */; };
 /* End PBXBuildFile section */
@@ -132,8 +133,9 @@
 		06F4C79C26AE752E00445E23 /* UserProfileListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileListItemViewModel.swift; sourceTree = "<group>"; };
 		06F4C79F26AE761F00445E23 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		06F4C7A126AE763200445E23 /* ListItemComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemComponent.swift; sourceTree = "<group>"; };
-		06F4C7A426AE834E00445E23 /* UserProfileListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileListItemCell.swift; sourceTree = "<group>"; };
 		06F4C7A626AE83B100445E23 /* UserProfileListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileListItemView.swift; sourceTree = "<group>"; };
+		06F4C7A826AE8D9C00445E23 /* BaseListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListItemView.swift; sourceTree = "<group>"; };
+		06F4C7AA26AE8EB400445E23 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		0A2810A4939606F05C4A3C6E /* Pods-Moments.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments.appstore.xcconfig"; path = "Target Support Files/Pods-Moments/Pods-Moments.appstore.xcconfig"; sourceTree = "<group>"; };
 		0C3BE388A5D87650497B54DF /* Pods-MomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentsTests.debug.xcconfig"; path = "Target Support Files/Pods-MomentsTests/Pods-MomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MomentsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -304,9 +306,11 @@
 		06554C2A26AA607A007E7B8B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				06554C3326AA6505007E7B8B /* BaseViewController.swift */,
+				06F4C7A826AE8D9C00445E23 /* BaseListItemView.swift */,
 				06F4C79F26AE761F00445E23 /* BaseTableViewCell.swift */,
+				06554C3326AA6505007E7B8B /* BaseViewController.swift */,
 				06F4C7A126AE763200445E23 /* ListItemComponent.swift */,
+				06F4C7AA26AE8EB400445E23 /* ListItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -402,11 +406,11 @@
 		06F4C77126AD395600445E23 /* Moments */ = {
 			isa = PBXGroup;
 			children = (
-				06F4C7A326AE82B300445E23 /* Views */,
 				06F4C77226AD397900445E23 /* Model */,
 				06F4C78E26AE651600445E23 /* Networking */,
 				06F4C79126AE6D7600445E23 /* Repositories */,
 				06F4C79426AE6FF700445E23 /* ViewModels */,
+				06F4C7A326AE82B300445E23 /* Views */,
 			);
 			path = Moments;
 			sourceTree = "<group>";
@@ -466,7 +470,6 @@
 		06F4C7A326AE82B300445E23 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				06F4C7A426AE834E00445E23 /* UserProfileListItemCell.swift */,
 				06F4C7A626AE83B100445E23 /* UserProfileListItemView.swift */,
 			);
 			path = Views;
@@ -756,6 +759,8 @@
 				06F4C77026AD293200445E23 /* APISession.swift in Sources */,
 				06554BCA26A95FF8007E7B8B /* AppDelegate.swift in Sources */,
 				06554C2C26AA6097007E7B8B /* AppRouter.swift in Sources */,
+				06F4C7A926AE8D9C00445E23 /* BaseListItemView.swift in Sources */,
+				06F4C7A026AE761F00445E23 /* BaseTableViewCell.swift in Sources */,
 				06554C3426AA6505007E7B8B /* BaseViewController.swift in Sources */,
 				06F4C76E26AD276E00445E23 /* Configuration.swift in Sources */,
 				06554C7B26AAD005007E7B8B /* DesignKitDemoItemViewModel.swift in Sources */,
@@ -764,19 +769,18 @@
 				06F4C79026AE654200445E23 /* GetMomentsByUserIDAPISession.swift in Sources */,
 				06554C7F26AAD2F3007E7B8B /* InternalMenuActionTriggerCell.swift in Sources */,
 				06554C7D26AAD098007E7B8B /* InternalMenuActionTriggerItemViewModel.swift in Sources */,
-				06F4C7A026AE761F00445E23 /* BaseTableViewCell.swift in Sources */,
 				06554C4426AA6EC8007E7B8B /* InternalMenuCell.swift in Sources */,
 				06554C4226AA6E9C007E7B8B /* InternalMenuDescriptionCell.swift in Sources */,
-				06F4C7A726AE83B100445E23 /* UserProfileListItemView.swift in Sources */,
 				06554C4026AA6BCE007E7B8B /* InternalMenuDescriptionItemViewModel.swift in Sources */,
 				06554C3E26AA68F2007E7B8B /* InternalMenuItemViewModel.swift in Sources */,
 				06554C7926AACA81007E7B8B /* InternalMenuRouter.swift in Sources */,
 				06554C3A26AA66FC007E7B8B /* InternalMenuSection.swift in Sources */,
 				06554C3626AA65A6007E7B8B /* InternalMenuViewController.swift in Sources */,
 				06554C3826AA664C007E7B8B /* InternalMenuViewModel.swift in Sources */,
+				06F4C7A226AE763200445E23 /* ListItemComponent.swift in Sources */,
+				06F4C7AB26AE8EB400445E23 /* ListItemView.swift in Sources */,
 				06F4C79926AE704A00445E23 /* ListItemViewModel.swift in Sources */,
 				06F4C79B26AE705200445E23 /* ListViewModel.swift in Sources */,
-				06F4C7A526AE834E00445E23 /* UserProfileListItemCell.swift in Sources */,
 				06F4C77426AD398400445E23 /* Moment.swift in Sources */,
 				06F4C77626AD398F00445E23 /* MomentsDetails.swift in Sources */,
 				06F4C79626AE701600445E23 /* MomentsListViewModel.swift in Sources */,
@@ -786,8 +790,8 @@
 				06F4C6F626AC1CBC00445E23 /* Strings.swift in Sources */,
 				06554C4926AAB87E007E7B8B /* UIApplicationExtension.swift in Sources */,
 				06F4C77A26AD399F00445E23 /* UserDetails.swift in Sources */,
+				06F4C7A726AE83B100445E23 /* UserProfileListItemView.swift in Sources */,
 				06F4C79D26AE752E00445E23 /* UserProfileListItemViewModel.swift in Sources */,
-				06F4C7A226AE763200445E23 /* ListItemComponent.swift in Sources */,
 				06554BCE26A95FF8007E7B8B /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

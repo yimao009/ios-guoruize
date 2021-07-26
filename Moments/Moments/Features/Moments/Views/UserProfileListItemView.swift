@@ -8,7 +8,8 @@
 import UIKit
 import DesignKit
 
-final class UserProfileListItemView<VM: ListItemViewModel>: BaseListItemView<VM> {
+final class UserProfileListItemView<VM: ListItemViewModel>: UIView, ListItemView {
+    typealias ViewModel = VM
 
     private let backgroundImageView: UIImageView = configure(UIImageView()) {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -58,7 +59,7 @@ final class UserProfileListItemView<VM: ListItemViewModel>: BaseListItemView<VM>
         fatalError(L10n.Development.fatalErrorInitCoderNotImplemented)
     }
 
-    func update(_ viewModel: ListItemViewModel) {
+    func update(_ viewModel: ViewModel) {
         guard let viewModel = viewModel as? UserProfileListItemViewModel else {
             return
         }

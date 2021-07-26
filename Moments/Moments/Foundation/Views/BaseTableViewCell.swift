@@ -7,11 +7,21 @@
 
 import UIKit
 
-class BaseTableViewCell<T: ListItemViewModel>: UITableViewCell, ListItemComponent {
+final class BaseTableViewCell<V: BaseListItemView<VM>, VM: ListItemViewModel>: UITableViewCell, ListItemCell {
+
+    typealias ViewModel = VM
+
+    private let view: V
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        view = .init()
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
+
+        contentView.addSubview(view)
+        view.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
 
     // swiftlint:disable unavailable_function
@@ -19,11 +29,7 @@ class BaseTableViewCell<T: ListItemViewModel>: UITableViewCell, ListItemComponen
         fatalError(L10n.Development.fatalErrorInitCoderNotImplemented)
     }
 
-    func update(with viewModel: ListItemViewModel) {
-        (viewModel as? T).map({ update($0 )})
-    }
-
-    func update(_ viewModel: T) {
-        fatalError(L10n.Development.fatalErrorSubclassToImplement)
+    func update(with viewModel: ViewModel) {
+        view.update(viewModel)
     }
 }

@@ -9,12 +9,12 @@ import Foundation
 
 enum Configuration {
     enum Error: Swift.Error {
-        case missKey, invalidValue
+        case missingKey, invalidValue
     }
 
     static func value<T>(for key: String) throws -> T where T: LosslessStringConvertible {
         guard let object = Bundle.main.object(forInfoDictionaryKey: key) else {
-            throw Error.missKey
+            throw Error.missingKey
         }
 
         switch object {

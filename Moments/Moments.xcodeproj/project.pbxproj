@@ -38,7 +38,6 @@
 		06F4C77626AD398F00445E23 /* MomentsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C77526AD398F00445E23 /* MomentsDetails.swift */; };
 		06F4C77826AD399800445E23 /* MomentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C77726AD399800445E23 /* MomentType.swift */; };
 		06F4C77A26AD399F00445E23 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C77926AD399F00445E23 /* UserDetails.swift */; };
-		06F4C79026AE654200445E23 /* GetMomentsByUserIDAPISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C78F26AE654200445E23 /* GetMomentsByUserIDAPISession.swift */; };
 		06F4C79326AE6D8800445E23 /* MomentsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C79226AE6D8800445E23 /* MomentsRepo.swift */; };
 		06F4C79626AE701600445E23 /* MomentsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C79526AE701600445E23 /* MomentsListViewModel.swift */; };
 		06F4C79926AE704A00445E23 /* ListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C79826AE704A00445E23 /* ListItemViewModel.swift */; };
@@ -49,7 +48,8 @@
 		06F4C7A926AE8D9C00445E23 /* BaseListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C7A826AE8D9C00445E23 /* BaseListItemView.swift */; };
 		06F4C7AB26AE8EB400445E23 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C7AA26AE8EB400445E23 /* ListItemView.swift */; };
 		06F4C7AD26AE90BB00445E23 /* ListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C7AC26AE90BB00445E23 /* ListItemCell.swift */; };
-		06F4C7AF26AE9EEE00445E23 /* MomentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C7AE26AE9EEE00445E23 /* MomentsViewController.swift */; };
+		06F4C7B126AEA31900445E23 /* MomentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C7B026AEA31900445E23 /* MomentsListViewController.swift */; };
+		06F4C7B426AEA8B300445E23 /* GetMomentsByUserIDSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C7B326AEA8B300445E23 /* GetMomentsByUserIDSession.swift */; };
 		BB63A786EDCDDE31A9FD44D3 /* Pods_Moments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023029A0117D29A1A0604469 /* Pods_Moments.framework */; };
 		BD4C5D9B2830F9E2B16B5D9E /* Pods_MomentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */; };
 /* End PBXBuildFile section */
@@ -122,7 +122,6 @@
 		06F4C77526AD398F00445E23 /* MomentsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsDetails.swift; sourceTree = "<group>"; };
 		06F4C77726AD399800445E23 /* MomentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentType.swift; sourceTree = "<group>"; };
 		06F4C77926AD399F00445E23 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
-		06F4C78F26AE654200445E23 /* GetMomentsByUserIDAPISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMomentsByUserIDAPISession.swift; sourceTree = "<group>"; };
 		06F4C79226AE6D8800445E23 /* MomentsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsRepo.swift; sourceTree = "<group>"; };
 		06F4C79526AE701600445E23 /* MomentsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsListViewModel.swift; sourceTree = "<group>"; };
 		06F4C79826AE704A00445E23 /* ListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewModel.swift; sourceTree = "<group>"; };
@@ -133,7 +132,8 @@
 		06F4C7A826AE8D9C00445E23 /* BaseListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListItemView.swift; sourceTree = "<group>"; };
 		06F4C7AA26AE8EB400445E23 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		06F4C7AC26AE90BB00445E23 /* ListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemCell.swift; sourceTree = "<group>"; };
-		06F4C7AE26AE9EEE00445E23 /* MomentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsViewController.swift; sourceTree = "<group>"; };
+		06F4C7B026AEA31900445E23 /* MomentsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsListViewController.swift; sourceTree = "<group>"; };
+		06F4C7B326AEA8B300445E23 /* GetMomentsByUserIDSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMomentsByUserIDSession.swift; sourceTree = "<group>"; };
 		0A2810A4939606F05C4A3C6E /* Pods-Moments.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments.appstore.xcconfig"; path = "Target Support Files/Pods-Moments/Pods-Moments.appstore.xcconfig"; sourceTree = "<group>"; };
 		0C3BE388A5D87650497B54DF /* Pods-MomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentsTests.debug.xcconfig"; path = "Target Support Files/Pods-MomentsTests/Pods-MomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MomentsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -403,7 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				06F4C77226AD397900445E23 /* Model */,
-				06F4C78E26AE651600445E23 /* Networking */,
+				06F4C7B226AEA89500445E23 /* Networking */,
 				06F4C79126AE6D7600445E23 /* Repositories */,
 				06F4C79426AE6FF700445E23 /* ViewModels */,
 				06F4C7A326AE82B300445E23 /* Views */,
@@ -420,14 +420,6 @@
 				06F4C77926AD399F00445E23 /* UserDetails.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		06F4C78E26AE651600445E23 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				06F4C78F26AE654200445E23 /* GetMomentsByUserIDAPISession.swift */,
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		06F4C79126AE6D7600445E23 /* Repositories */ = {
@@ -466,10 +458,18 @@
 		06F4C7A326AE82B300445E23 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				06F4C7AE26AE9EEE00445E23 /* MomentsViewController.swift */,
+				06F4C7B026AEA31900445E23 /* MomentsListViewController.swift */,
 				06F4C7A626AE83B100445E23 /* UserProfileListItemView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		06F4C7B226AEA89500445E23 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				06F4C7B326AEA8B300445E23 /* GetMomentsByUserIDSession.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		5590A371016DF6E7A106A86C /* Frameworks */ = {
@@ -762,7 +762,7 @@
 				06554C7B26AAD005007E7B8B /* DesignKitDemoItemViewModel.swift in Sources */,
 				06F4C6E726ABCE8600445E23 /* DesignKitDemoViewController.swift in Sources */,
 				06554C2826AA5E43007E7B8B /* Functions.swift in Sources */,
-				06F4C79026AE654200445E23 /* GetMomentsByUserIDAPISession.swift in Sources */,
+				06F4C7B426AEA8B300445E23 /* GetMomentsByUserIDSession.swift in Sources */,
 				06554C7F26AAD2F3007E7B8B /* InternalMenuActionTriggerCell.swift in Sources */,
 				06554C7D26AAD098007E7B8B /* InternalMenuActionTriggerItemViewModel.swift in Sources */,
 				06554C4426AA6EC8007E7B8B /* InternalMenuCell.swift in Sources */,
@@ -779,9 +779,9 @@
 				06F4C79B26AE705200445E23 /* ListViewModel.swift in Sources */,
 				06F4C77426AD398400445E23 /* Moment.swift in Sources */,
 				06F4C77626AD398F00445E23 /* MomentsDetails.swift in Sources */,
+				06F4C7B126AEA31900445E23 /* MomentsListViewController.swift in Sources */,
 				06F4C79626AE701600445E23 /* MomentsListViewModel.swift in Sources */,
 				06F4C79326AE6D8800445E23 /* MomentsRepo.swift in Sources */,
-				06F4C7AF26AE9EEE00445E23 /* MomentsViewController.swift in Sources */,
 				06F4C77826AD399800445E23 /* MomentType.swift in Sources */,
 				06554BCC26A95FF8007E7B8B /* SceneDelegate.swift in Sources */,
 				06F4C6F626AC1CBC00445E23 /* Strings.swift in Sources */,

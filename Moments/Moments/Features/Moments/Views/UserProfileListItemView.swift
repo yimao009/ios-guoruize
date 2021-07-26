@@ -8,8 +8,7 @@
 import UIKit
 import DesignKit
 
-final class UserProfileListItemView<VM: ListItemViewModel>: UIView, ListItemView {
-    typealias ViewModel = VM
+final class UserProfileListItemView<VM: ListItemViewModel>: BaseListItemView<VM> {
 
     private let backgroundImageView: UIImageView = configure(UIImageView()) {
         $0.translatesAutoresizingMaskIntoConstraints = false

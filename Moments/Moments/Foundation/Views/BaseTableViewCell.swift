@@ -8,7 +8,6 @@
 import UIKit
 
 final class BaseTableViewCell<V: BaseListItemView<VM>, VM: ListItemViewModel>: UITableViewCell, ListItemCell {
-
     typealias ViewModel = VM
 
     private let view: V

@@ -35,7 +35,7 @@ platform :ios do
       swiftlint(
         mode: :autocorrect,
         executable: "./Pods/SwiftLint/swiftlint",  # Important if you've installed it via CocoaPods
-        config_file: '.swiftlint.yml',
+        config_file: './Moments/.swiftlint.yml',
         raise_if_swiftlint_error: true)
     end
     
@@ -43,7 +43,7 @@ platform :ios do
       swiftlint(
         mode: :lint,
         executable: "./Pods/SwiftLint/swiftlint",  # Important if you've installed it via CocoaPods
-        config_file: '.swiftlint.yml',
+        config_file: './Moments/.swiftlint.yml',
         raise_if_swiftlint_error: true)
     end
 

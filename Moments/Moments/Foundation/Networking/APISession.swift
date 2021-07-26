@@ -23,7 +23,6 @@ protocol APISession {
 }
 
 extension APISession {
-
     var defaultHeaders: HTTPHeaders {
         // swiftlint:disable no_hardcoded_strings
         let headers: HTTPHeaders = [
@@ -41,14 +40,13 @@ extension APISession {
     func post(_ path: String, parameters: Parameters? = nil, headers: HTTPHeaders = [:]) -> Observable<ResponseType> {
         return post(path, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
     }
-
 }
 
 private extension APISession {
     func post(_ path: String, method: HTTPMethod, parameters: Parameters?, encoding: ParameterEncoding, headers: HTTPHeaders) -> Observable<ResponseType> {
         let url = baseURL.appendingPathComponent(path)
         var allHeaders = defaultHeaders
-        headers.forEach {  allHeaders.add($0) }
+        headers.forEach { allHeaders.add($0) }
 
         return Observable.create { observer -> Disposable in
             let request = AF.request(url, method: method, parameters: parameters, encoding: encoding, headers: allHeaders, interceptor: nil, requestModifier: nil)
@@ -79,6 +77,5 @@ private extension APISession {
                 request.cancel()
             }
         }
-
     }
 }

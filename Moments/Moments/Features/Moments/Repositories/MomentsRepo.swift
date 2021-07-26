@@ -13,7 +13,6 @@ protocol MomentsRepoType {
 }
 
 struct MomentsRepo: MomentsRepoType {
-
     private let getMomentsByUserIDSessionBuilder: () -> GetMomentsByUserIDSessionType
 
     static var shared: MomentsRepo = {
@@ -29,5 +28,4 @@ struct MomentsRepo: MomentsRepoType {
     func getMoments(userID: String) -> Observable<MomentsDetails> {
         getMomentsByUserIDSessionBuilder().getMoments(userID: userID)
     }
-
 }

@@ -24,6 +24,4 @@ class BaseViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError(L10n.Development.fatalErrorInitCoderNotImplemented)
     }
-
-
 }

@@ -32,7 +32,6 @@ struct MomentsListViewModel: ListViewModel {
                 return Observable.just(())
             }
             .share()
-
     }
 }
 

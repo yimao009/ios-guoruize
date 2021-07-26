@@ -16,7 +16,6 @@ enum Configuration {
         guard let object = Bundle.main.object(forInfoDictionaryKey: key) else {
             throw Error.missingKey
         }
-
         switch object {
         case let value as T:
             return value

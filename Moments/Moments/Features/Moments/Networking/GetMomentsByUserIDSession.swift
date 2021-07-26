@@ -16,7 +16,7 @@ protocol GetMomentsByUserIDSessionType {
 // swiftlint:disable no_hardcoded_strings
 struct GetMomentsByUserIDSession: GetMomentsByUserIDSessionType {
     private struct Session: APISession {
-        typealias ResponseType = Response
+        typealias ReponseType = Response
 
         let path = L10n.Development.graphqlPath
         let parameters: Parameters
@@ -32,7 +32,7 @@ struct GetMomentsByUserIDSession: GetMomentsByUserIDSessionType {
             let data: Data
 
             struct Data: Codable {
-                let getMomenesDetailsByUserID: MomentsDetails
+                let getMomentsDetailsByUserID: MomentsDetails
             }
         }
 
@@ -41,34 +41,34 @@ struct GetMomentsByUserIDSession: GetMomentsByUserIDSessionType {
         }
 
         private static let query = """
-                       query getMomentsDetailsByUserID($userID: ID!){
-                         getMomentsDetailsByUserID(userID: $userID) {
-                           userDetails {
-                             id
-                             name
-                             avatar
-                             backgroundImage
-                           }
-                           moments {
-                             id
-                             userDetails {
-                               name
-                               avatar
-                             }
-                             type
-                             title
-                             photos
-                             createdDate
-                           }
-                         }
-                       }
+           query getMomentsDetailsByUserID($userID: ID!){
+             getMomentsDetailsByUserID(userID: $userID) {
+               userDetails {
+                 id
+                 name
+                 avatar
+                 backgroundImage
+               }
+               moments {
+                 id
+                 userDetails {
+                   name
+                   avatar
+                 }
+                 type
+                 title
+                 photos
+                 createdDate
+               }
+             }
+           }
         """
     }
 
     func getMoments(userID: String) -> Observable<MomentsDetails> {
         let session = Session(userID: userID)
         return session.post().map {
-            $0.data.getMomenesDetailsByUserID
+            $0.data.getMomentsDetailsByUserID
         }
     }
 }

@@ -16,10 +16,10 @@ public enum APISessionError: Error {
 }
 
 protocol APISession {
-    associatedtype ModeType: Codable
+    associatedtype ResponseType: Codable
 
     var defaultHeaders: HTTPHeaders { get }
-    func post(_ path: String, parameters: Parameters?, headers: HTTPHeaders) -> Observable<ModeType>
+    func post(_ path: String, parameters: Parameters?, headers: HTTPHeaders) -> Observable<ResponseType>
 }
 
 extension APISession {
@@ -38,14 +38,14 @@ extension APISession {
         API.baseURL
     }
 
-    func post(_ path: String, parameters: Parameters? = nil, headers: HTTPHeaders = [:]) -> Observable<ModeType> {
+    func post(_ path: String, parameters: Parameters? = nil, headers: HTTPHeaders = [:]) -> Observable<ResponseType> {
         return post(path, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
     }
 
 }
 
 private extension APISession {
-    func post(_ path: String, method: HTTPMethod, parameters: Parameters?, encoding: ParameterEncoding, headers: HTTPHeaders) -> Observable<ModeType> {
+    func post(_ path: String, method: HTTPMethod, parameters: Parameters?, encoding: ParameterEncoding, headers: HTTPHeaders) -> Observable<ResponseType> {
         let url = baseURL.appendingPathComponent(path)
         var allHeaders = defaultHeaders
         headers.forEach {  allHeaders.add($0) }
@@ -61,7 +61,7 @@ private extension APISession {
                             return
                         }
                         do {
-                            let model = try JSONDecoder().decode(ModeType.self, from: data)
+                            let model = try JSONDecoder().decode(ResponseType.self, from: data)
                             observer.onNext(model)
                         } catch {
                             observer.onError(error)

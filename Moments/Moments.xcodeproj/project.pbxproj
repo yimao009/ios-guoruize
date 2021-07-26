@@ -402,7 +402,7 @@
 		06F4C77126AD395600445E23 /* Moments */ = {
 			isa = PBXGroup;
 			children = (
-				06F4C77226AD397900445E23 /* Model */,
+				06F4C77226AD397900445E23 /* Models */,
 				06F4C7B226AEA89500445E23 /* Networking */,
 				06F4C79126AE6D7600445E23 /* Repositories */,
 				06F4C79426AE6FF700445E23 /* ViewModels */,
@@ -411,7 +411,7 @@
 			path = Moments;
 			sourceTree = "<group>";
 		};
-		06F4C77226AD397900445E23 /* Model */ = {
+		06F4C77226AD397900445E23 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				06F4C77326AD398400445E23 /* Moment.swift */,
@@ -419,7 +419,7 @@
 				06F4C77726AD399800445E23 /* MomentType.swift */,
 				06F4C77926AD399F00445E23 /* UserDetails.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		06F4C79126AE6D7600445E23 /* Repositories */ = {

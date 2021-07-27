@@ -16,8 +16,8 @@ class InternalMenuFeatureToggleItemViewModel: InternalMenuItemViewModel {
     var on: Bool { false }
 
     func select() { }
-    func toggleOff() { fatalError(L10n.Development.fatalErrorSubclassToImplement) }
-    func toggleOn() { fatalError(L10n.Development.fatalErrorSubclassToImplement) }
+    func toggle(isOn: Bool) { fatalError(L10n.Development.fatalErrorSubclassToImplement) }
+
 }
 
 final class InternalMenuLikeButtonToggleItemViewModel: InternalMenuFeatureToggleItemViewModel {
@@ -37,11 +37,7 @@ final class InternalMenuLikeButtonToggleItemViewModel: InternalMenuFeatureToggle
         self.isOn = toggleDataStore.isToggleOn(.isLikeButtonForMomentEnabled)
     }
 
-    override func toggleOn() {
-        toggleDataStore.update(toggle: .isLikeButtonForMomentEnabled, value: true)
-    }
-
-    override func toggleOff() {
-        toggleDataStore.update(toggle: .isLikeButtonForMomentEnabled, value: false)
+    override func toggle(isOn: Bool) {
+        toggleDataStore.update(toggle: .isLikeButtonForMomentEnabled, value: isOn)
     }
 }

@@ -34,10 +34,7 @@
 		06F4C76C26AD273600445E23 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C76B26AD273600445E23 /* API.swift */; };
 		06F4C76E26AD276E00445E23 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C76D26AD276E00445E23 /* Configuration.swift */; };
 		06F4C77026AD293200445E23 /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C76F26AD293200445E23 /* APISession.swift */; };
-		06F4C77426AD398400445E23 /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C77326AD398400445E23 /* Moment.swift */; };
 		06F4C77626AD398F00445E23 /* MomentsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C77526AD398F00445E23 /* MomentsDetails.swift */; };
-		06F4C77826AD399800445E23 /* MomentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C77726AD399800445E23 /* MomentType.swift */; };
-		06F4C77A26AD399F00445E23 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C77926AD399F00445E23 /* UserDetails.swift */; };
 		06F4C79326AE6D8800445E23 /* MomentsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C79226AE6D8800445E23 /* MomentsRepo.swift */; };
 		06F4C79626AE701600445E23 /* MomentsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C79526AE701600445E23 /* MomentsListViewModel.swift */; };
 		06F4C79926AE704A00445E23 /* ListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C79826AE704A00445E23 /* ListItemViewModel.swift */; };
@@ -118,10 +115,7 @@
 		06F4C76B26AD273600445E23 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		06F4C76D26AD276E00445E23 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		06F4C76F26AD293200445E23 /* APISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
-		06F4C77326AD398400445E23 /* Moment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
 		06F4C77526AD398F00445E23 /* MomentsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsDetails.swift; sourceTree = "<group>"; };
-		06F4C77726AD399800445E23 /* MomentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentType.swift; sourceTree = "<group>"; };
-		06F4C77926AD399F00445E23 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		06F4C79226AE6D8800445E23 /* MomentsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsRepo.swift; sourceTree = "<group>"; };
 		06F4C79526AE701600445E23 /* MomentsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsListViewModel.swift; sourceTree = "<group>"; };
 		06F4C79826AE704A00445E23 /* ListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewModel.swift; sourceTree = "<group>"; };
@@ -414,10 +408,7 @@
 		06F4C77226AD397900445E23 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				06F4C77326AD398400445E23 /* Moment.swift */,
 				06F4C77526AD398F00445E23 /* MomentsDetails.swift */,
-				06F4C77726AD399800445E23 /* MomentType.swift */,
-				06F4C77926AD399F00445E23 /* UserDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -777,16 +768,13 @@
 				06F4C7AB26AE8EB400445E23 /* ListItemView.swift in Sources */,
 				06F4C79926AE704A00445E23 /* ListItemViewModel.swift in Sources */,
 				06F4C79B26AE705200445E23 /* ListViewModel.swift in Sources */,
-				06F4C77426AD398400445E23 /* Moment.swift in Sources */,
 				06F4C77626AD398F00445E23 /* MomentsDetails.swift in Sources */,
 				06F4C7B126AEA31900445E23 /* MomentsListViewController.swift in Sources */,
 				06F4C79626AE701600445E23 /* MomentsListViewModel.swift in Sources */,
 				06F4C79326AE6D8800445E23 /* MomentsRepo.swift in Sources */,
-				06F4C77826AD399800445E23 /* MomentType.swift in Sources */,
 				06554BCC26A95FF8007E7B8B /* SceneDelegate.swift in Sources */,
 				06F4C6F626AC1CBC00445E23 /* Strings.swift in Sources */,
 				06554C4926AAB87E007E7B8B /* UIApplicationExtension.swift in Sources */,
-				06F4C77A26AD399F00445E23 /* UserDetails.swift in Sources */,
 				06F4C7A726AE83B100445E23 /* UserProfileListItemView.swift in Sources */,
 				06F4C79D26AE752E00445E23 /* UserProfileListItemViewModel.swift in Sources */,
 			);

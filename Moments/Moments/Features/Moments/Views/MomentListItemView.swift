@@ -47,12 +47,24 @@ final class MomentListItemView: BaseListItemView {
         $0.numberOfLines = 1
     }
 
+    private let favoriteButton: UIButton = configure(.init()) {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.asHeartFavoriteButton()
+    }
+
     private let dividerView: UIView = configure(.init()) {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.backgroundColor = UIColor.designKit.line
     }
 
-    override init(frame: CGRect) {
+    private let toggleDataStore: ToggleDataStoreType
+
+    override convenience init(frame: CGRect = .zero) {
+        self.init(frame: frame, toggleDataStore: TogglesDataStore.shared)
+    }
+
+    init(frame: CGRect = .zero, toggleDataStore: ToggleDataStoreType = TogglesDataStore.shared) {
+        self.toggleDataStore = toggleDataStore
         super.init(frame: frame)
 
         setupUI()
@@ -64,7 +76,6 @@ final class MomentListItemView: BaseListItemView {
     }
 
     override func update(with viewModel: ListItemViewModel) {
-
         guard let viewModel = viewModel as? MomentListItemViewModel else {
             return
         }
@@ -80,7 +91,6 @@ final class MomentListItemView: BaseListItemView {
 private extension MomentListItemView {
     func setupUI() {
         backgroundColor = UIColor.designKit.background
-
         let verticalStackView = configure(UIStackView.init(arrangedSubviews: [userNameLabel, titleLabel, momentImageView, postDateDescriptionLabel])) {
             $0.spacing = Spacing.extraSmall
             $0.axis = .vertical
@@ -104,6 +114,11 @@ private extension MomentListItemView {
             $0.leading.equalToSuperview().offset(Spacing.medium)
             $0.trailing.equalToSuperview().offset(-Spacing.medium)
         }
+
+        // Add `favoriteButton` if the toggle is ON
+        if toggleDataStore.isToggleOn(.isLikeButtonForMomentEnabled) {
+            addSubview(favoriteButton)
+        }
     }
 
     func setupConstraints() {
@@ -115,6 +130,13 @@ private extension MomentListItemView {
         momentImageView.snp.makeConstraints {
             $0.height.equalTo(120)
             $0.width.equalTo(240)
+        }
+
+        if toggleDataStore.isToggleOn(.isLikeButtonForMomentEnabled) {
+            favoriteButton.snp.makeConstraints {
+                $0.bottom.equalToSuperview().offset(-Spacing.medium)
+                $0.trailing.equalToSuperview().offset(-Spacing.medium)
+            }
         }
 
         dividerView.snp.makeConstraints {

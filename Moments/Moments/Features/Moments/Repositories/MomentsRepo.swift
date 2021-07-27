@@ -10,25 +10,32 @@ import RxSwift
 
 protocol MomentsRepoType {
     func getMoments(userID: String) -> Observable<MomentsDetails>
-    func updateLike(momentID: String, from userID: String)
+    func updateLike(isLiked: Bool, momentID: String, from userID: String) -> Observable<MomentsDetails>
 }
 
 struct MomentsRepo: MomentsRepoType {
+
     private let getMomentsByUserIDSessionBuilder: () -> GetMomentsByUserIDSessionType
+    private let updateMomentLikesSessionBuilder: () -> UpdateMomentLikeSessionType
 
-    static var shared: MomentsRepo = {
-        MomentsRepo {
-            GetMomentsByUserIDSession()
-        }
-    }()
+    static var shared: MomentsRepo = MomentsRepo {
+        GetMomentsByUserIDSession()
+    } updateMomentLikesSessionBuilder: {
+        UpdateMomentLikeSession()
+    }
 
-    init(getMomentsByUserIDAPISessionBuilder: @escaping () -> GetMomentsByUserIDSessionType) {
+
+    init(getMomentsByUserIDAPISessionBuilder: @escaping () -> GetMomentsByUserIDSessionType,
+         updateMomentLikesSessionBuilder: @escaping () -> UpdateMomentLikeSessionType) {
         self.getMomentsByUserIDSessionBuilder = getMomentsByUserIDAPISessionBuilder
+        self.updateMomentLikesSessionBuilder = updateMomentLikesSessionBuilder
     }
 
     func getMoments(userID: String) -> Observable<MomentsDetails> {
         getMomentsByUserIDSessionBuilder().getMoments(userID: userID)
     }
 
-    func updateLike(momentID: String, from userID: String) { }
+    func updateLike(isLiked: Bool, momentID: String, from userID: String) -> Observable<MomentsDetails> {
+        updateMomentLikesSessionBuilder().updateLike(isLiked, momentID: momentID, userID: userID)
+    }
 }

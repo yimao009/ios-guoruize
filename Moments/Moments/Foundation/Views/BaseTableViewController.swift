@@ -96,12 +96,9 @@ private extension BaseTableViewController {
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
 
-        viewModel.loadItems()
-            .do(onDispose: { self.activityIndicatorView.rx.isAnimating.onNext(false) })
-            .map { false }
-            .startWith(true)
-            .distinctUntilChanged()
-            .bind(to: activityIndicatorView.rx.isAnimating)
+        viewModel.hasError
+            .map { !$0 }
+            .bind(to: errorLabel.rx.isHidden)
             .disposed(by: disposeBag)
     }
 

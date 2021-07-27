@@ -35,10 +35,15 @@ class InternalMenuViewModel: InternalMenuViewModelType {
             ]
         )
 
+        let featureTogglesSection = InternalMenuSection(
+            title: L10n.InternalMenu.featureToggles,
+            items: [InternalMenuLikeButtonToggleItemViewModel(toggleDataStore: TogglesDataStore.shared)])
+
         // 发送可观察序列
         sections = Observable.just([
             infoSection,
-            designKitSection
+            designKitSection,
+            featureTogglesSection
         ])
     }
 }

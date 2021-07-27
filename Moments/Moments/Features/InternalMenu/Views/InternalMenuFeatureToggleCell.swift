@@ -9,7 +9,6 @@ import UIKit
 
 class InternalMenuFeatureToggleCell: InternalMenuCell<InternalMenuFeatureToggleItemViewModel> {
     var item: InternalMenuFeatureToggleItemViewModel?
-    
     private let switchControl: UISwitch = configure(.init()) {
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
@@ -24,6 +23,12 @@ class InternalMenuFeatureToggleCell: InternalMenuCell<InternalMenuFeatureToggleI
 
     required init?(coder: NSCoder) {
         fatalError(L10n.Development.fatalErrorInitCoderNotImplemented)
+    }
+
+    override func update(_ item: InternalMenuFeatureToggleItemViewModel) {
+        self.item = item
+        textLabel?.text = item.title
+        switchControl.isOn = item.on
     }
 
     @objc

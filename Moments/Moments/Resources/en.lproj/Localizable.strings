@@ -16,6 +16,8 @@
 "internalMenu.CFBundleName" = "CFBundleName";
 "internalMenu.featureToggles" = "Feature Toggles";
 "internalMenu.favoriteButton" = "点赞按钮";
+"internalMenu.starFavoriteButton" = "Star favorite button";
+"internalMenu.heartFavoriteButton" = "Heart favorite button";
 
 "internalMenu.typography" = "Typography";
 "internalMenu.colors" = "Colors";

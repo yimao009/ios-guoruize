@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import DesignKit
 
 final class DesignKitDemoViewController: UIViewController {
     override func viewDidLoad() {
@@ -165,15 +166,42 @@ private extension DesignKitDemoViewController {
             $0.font = UIFont.designKit.title1
         }
 
-        let likeButton: UIButton = configure(.init()) {
+        let starFavoriteButtonlabel: UILabel = configure(.init()) {
+            $0.text = L10n.InternalMenu.starFavoriteButton
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.textColor = UIColor.designKit.primaryText
+        }
+
+        let starFavoriteButton: UIButton = configure(.init()) {
             $0.translatesAutoresizingMaskIntoConstraints = false
             $0.asStarFavoriteButton()
         }
 
-        let stakcView: UIStackView = configure(.init(arrangedSubviews:[title, likeButton])) {
+        let starFavoriteButtonStackView: UIStackView = configure(.init(arrangedSubviews: [starFavoriteButtonlabel, starFavoriteButton])) {
+            $0.axis = .horizontal
+            $0.spacing = Spacing.extraSmall
+        }
+
+        let heartFavoriteButtonlabel: UILabel = configure(.init()) {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.text = L10n.InternalMenu.heartFavoriteButton
+            $0.textColor = UIColor.designKit.primaryText
+        }
+
+        let heartFavoriteButton: UIButton = configure(.init()) {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.asHeartFavoriteButton()
+        }
+
+        let heartFavoriteButtonStackView: UIStackView = configure(.init(arrangedSubviews: [heartFavoriteButtonlabel, heartFavoriteButton])) {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.spacing = Spacing.extraSmall
+        }
+
+        let stakcView: UIStackView = configure(.init(arrangedSubviews:[title, starFavoriteButtonStackView, heartFavoriteButtonStackView])) {
             $0.translatesAutoresizingMaskIntoConstraints = false
             $0.axis = .vertical
-            $0.spacing = 7
+            $0.spacing = Spacing.extraSmall
         }
         return stakcView
     }

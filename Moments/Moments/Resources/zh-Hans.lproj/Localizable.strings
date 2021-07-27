@@ -15,6 +15,8 @@
 "internalMenu.CFBundleName" = "CFBundleName";
 "internalMenu.designKitDemo" = "DesignKit 范例";
 "internalMenu.featureToggles" = "功能开关";
+"internalMenu.starFavoriteButton" = "星形点赞按钮";
+"internalMenu.heartFavoriteButton" = "心形点赞按钮";
 
 "internalMenu.typography" = "字体";
 "internalMenu.colors" = "颜色";

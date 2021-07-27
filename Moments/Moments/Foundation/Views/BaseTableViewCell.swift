@@ -8,7 +8,6 @@
 import UIKit
 
 final class BaseTableViewCell<V: BaseListItemView>: UITableViewCell, ListItemCell {
-
     private let view: V
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

@@ -20,7 +20,6 @@ final class UserProfileListItemView: BaseListItemView {
         $0.asAvatar(cornerRadius: 8)
         $0.contentMode = .scaleAspectFill
         $0.accessibilityIgnoresInvertColors = true
-        $0.clipsToBounds = true
     }
 
     private let nameLabel: UILabel = configure(.init()) {
@@ -33,28 +32,11 @@ final class UserProfileListItemView: BaseListItemView {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        addSubview(backgroundImageView)
-        addSubview(avatarImageView)
-        addSubview(nameLabel)
-
-        backgroundImageView.snp.makeConstraints {
-            $0.top.leading.trailing.equalTo(self)
-            $0.bottom.equalTo(self.snp.bottom).offset(-Spacing.medium)
-            $0.height.equalTo(backgroundImageView.snp.width).multipliedBy(0.8).priority(999)
-        }
-
-        avatarImageView.snp.makeConstraints {
-            $0.right.equalTo(self.snp.right).offset(-Spacing.medium)
-            $0.bottom.equalTo(self.snp.bottom)
-            $0.size.equalTo(CGSize(width: 80, height: 80))
-        }
-
-        nameLabel.snp.makeConstraints {
-            $0.right.equalTo(self.avatarImageView.snp.left).offset(-Spacing.medium)
-            $0.centerY.equalTo(self.avatarImageView.snp.centerY)
-        }
+        setupUI()
+        setupConstraints()
     }
 
+    // swiftlint:disable unavailable_function
     required init?(coder: NSCoder) {
         fatalError(L10n.Development.fatalErrorInitCoderNotImplemented)
     }
@@ -67,5 +49,36 @@ final class UserProfileListItemView: BaseListItemView {
         backgroundImageView.kf.setImage(with: viewModel.backgroundImageURL)
         avatarImageView.kf.setImage(with: viewModel.avatarURL)
         nameLabel.text = viewModel.name
+    }
+}
+
+private extension UserProfileListItemView {
+    func setupUI() {
+        backgroundColor = UIColor.designKit.background
+        [backgroundImageView, avatarImageView, nameLabel].forEach {
+            addSubview($0)
+        }
+    }
+
+    func setupConstraints() {
+        backgroundImageView.snp.makeConstraints {
+            $0.top.equalTo(self.snp.top)
+            $0.leading.equalTo(self.snp.leading)
+            $0.trailing.equalTo(self.snp.trailing)
+            $0.bottom.equalTo(self.snp.bottom).offset(-Spacing.medium)
+            $0.height.equalTo(backgroundImageView.snp.width).multipliedBy(0.8).priority(999)
+        }
+
+        avatarImageView.snp.makeConstraints {
+            $0.right.equalTo(self.snp.right).offset(-Spacing.medium)
+            $0.bottom.equalTo(self.snp.bottom)
+            $0.height.equalTo(80)
+            $0.width.equalTo(80)
+        }
+
+        nameLabel.snp.makeConstraints {
+            $0.right.equalTo(self.avatarImageView.snp.left).offset(-Spacing.medium)
+            $0.centerY.equalTo(self.avatarImageView.snp.centerY)
+        }
     }
 }

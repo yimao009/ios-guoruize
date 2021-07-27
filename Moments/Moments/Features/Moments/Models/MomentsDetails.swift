@@ -19,7 +19,6 @@ struct MomentsDetails: Codable {
     }
 
     struct Moment: Codable {
-
         struct MomentUserDetails: Codable {
             let name: String
             let avatar: String

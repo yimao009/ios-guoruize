@@ -49,6 +49,7 @@
 		06F4C7B426AEA8B300445E23 /* GetMomentsByUserIDSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C7B326AEA8B300445E23 /* GetMomentsByUserIDSession.swift */; };
 		06FD4C4A26AFAC7C00E85F1A /* MomentListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FD4C4926AFAC7C00E85F1A /* MomentListItemView.swift */; };
 		06FD4C4C26AFAEAC00E85F1A /* MomentListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FD4C4B26AFAEAC00E85F1A /* MomentListItemViewModel.swift */; };
+		06FD4C4E26AFD33900E85F1A /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FD4C4D26AFD33900E85F1A /* BaseTableViewController.swift */; };
 		BB63A786EDCDDE31A9FD44D3 /* Pods_Moments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023029A0117D29A1A0604469 /* Pods_Moments.framework */; };
 		BD4C5D9B2830F9E2B16B5D9E /* Pods_MomentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */; };
 /* End PBXBuildFile section */
@@ -132,6 +133,7 @@
 		06F4C7B326AEA8B300445E23 /* GetMomentsByUserIDSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMomentsByUserIDSession.swift; sourceTree = "<group>"; };
 		06FD4C4926AFAC7C00E85F1A /* MomentListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentListItemView.swift; sourceTree = "<group>"; };
 		06FD4C4B26AFAEAC00E85F1A /* MomentListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentListItemViewModel.swift; sourceTree = "<group>"; };
+		06FD4C4D26AFD33900E85F1A /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		0A2810A4939606F05C4A3C6E /* Pods-Moments.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments.appstore.xcconfig"; path = "Target Support Files/Pods-Moments/Pods-Moments.appstore.xcconfig"; sourceTree = "<group>"; };
 		0C3BE388A5D87650497B54DF /* Pods-MomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentsTests.debug.xcconfig"; path = "Target Support Files/Pods-MomentsTests/Pods-MomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MomentsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -303,6 +305,7 @@
 			children = (
 				06F4C7A826AE8D9C00445E23 /* BaseListItemView.swift */,
 				06F4C79F26AE761F00445E23 /* BaseTableViewCell.swift */,
+				06FD4C4D26AFD33900E85F1A /* BaseTableViewController.swift */,
 				06554C3326AA6505007E7B8B /* BaseViewController.swift */,
 				06F4C7AC26AE90BB00445E23 /* ListItemCell.swift */,
 				06F4C7AA26AE8EB400445E23 /* ListItemView.swift */,
@@ -754,6 +757,7 @@
 				06554C2C26AA6097007E7B8B /* AppRouter.swift in Sources */,
 				06F4C7A926AE8D9C00445E23 /* BaseListItemView.swift in Sources */,
 				06F4C7A026AE761F00445E23 /* BaseTableViewCell.swift in Sources */,
+				06FD4C4E26AFD33900E85F1A /* BaseTableViewController.swift in Sources */,
 				06554C3426AA6505007E7B8B /* BaseViewController.swift in Sources */,
 				06F4C76E26AD276E00445E23 /* Configuration.swift in Sources */,
 				06554C7B26AAD005007E7B8B /* DesignKitDemoItemViewModel.swift in Sources */,

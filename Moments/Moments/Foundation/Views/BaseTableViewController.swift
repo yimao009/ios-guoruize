@@ -11,7 +11,6 @@ import RxSwift
 import RxDataSources
 
 class BaseTableViewController: BaseViewController {
-
     var viewModel: ListViewModel!
 
     private let tableView: UITableView = configure(.init()) {
@@ -22,7 +21,7 @@ class BaseTableViewController: BaseViewController {
         $0.contentInsetAdjustmentBehavior = .never
     }
 
-    private let activityIndicatorView: UIActivityIndicatorView = configure(.init()) {
+    private let activityIndicatorView: UIActivityIndicatorView = configure(.init(style: .large)) {
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
     private let errorLabel: UILabel = configure(.init()) {
@@ -45,7 +44,6 @@ class BaseTableViewController: BaseViewController {
 
         loadViewModel()
     }
-
 }
 private extension BaseTableViewController {
     func setupUI() {
@@ -71,8 +69,6 @@ private extension BaseTableViewController {
 
         activityIndicatorView.snp.makeConstraints {
             $0.center.equalToSuperview()
-            $0.width.equalTo(60)
-            $0.height.equalTo(60)
         }
 
         errorLabel.snp.makeConstraints {
@@ -111,7 +107,10 @@ private extension BaseTableViewController {
 
     func loadViewModel() {
         viewModel.load()
-            .do(onDispose: { self.activityIndicatorView.rx.isAnimating.onNext(false)})
+            .do(onDispose: {
+                self.activityIndicatorView.rx.isAnimating.onNext(false)
+                self.tableView.refreshControl?.endRefreshing()
+            })
             .map { false }
             .startWith(true)
             .distinctUntilChanged()

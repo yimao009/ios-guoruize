@@ -30,6 +30,11 @@ struct MomentsDetails: Codable {
             case photos = "PHOTOS"
         }
 
+        struct LikedUserDetails: Codable {
+            let id: String
+            let avatar: String
+        }
+
         let id: String
         let userDetails: MomentUserDetails
         let type: MomentType
@@ -38,6 +43,6 @@ struct MomentsDetails: Codable {
         let photos: [String]
         let createdDate: String
         let isLiked: Bool? // Change to non-optional when removing `isLikeButtonForMomentEnabled` toggle
-        let likes: [String]? // Change to non-optional when removing `isLikeButtonForMomentEnabled` toggle
+        let likes: [LikedUserDetails]? // Change to non-optional when removing `isLikeButtonForMomentEnabled` toggle
     }
 }

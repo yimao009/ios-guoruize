@@ -60,8 +60,11 @@ struct UpdateMomentLikeSession: UpdateMomentLikeSessionType {
                  title
                  photos
                  createdDate
-                 isLiked,
-                 likes
+                 isLiked
+                 likes {
+                   id
+                   avatar
+                 }
                }
              }
            }

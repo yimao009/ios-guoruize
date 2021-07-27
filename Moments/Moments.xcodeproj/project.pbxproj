@@ -50,6 +50,7 @@
 		06FD4C4A26AFAC7C00E85F1A /* MomentListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FD4C4926AFAC7C00E85F1A /* MomentListItemView.swift */; };
 		06FD4C4C26AFAEAC00E85F1A /* MomentListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FD4C4B26AFAEAC00E85F1A /* MomentListItemViewModel.swift */; };
 		06FD4C4E26AFD33900E85F1A /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FD4C4D26AFD33900E85F1A /* BaseTableViewController.swift */; };
+		06FD4C5126AFDA0300E85F1A /* TogglesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FD4C5026AFDA0300E85F1A /* TogglesDataSource.swift */; };
 		BB63A786EDCDDE31A9FD44D3 /* Pods_Moments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023029A0117D29A1A0604469 /* Pods_Moments.framework */; };
 		BD4C5D9B2830F9E2B16B5D9E /* Pods_MomentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */; };
 /* End PBXBuildFile section */
@@ -134,6 +135,7 @@
 		06FD4C4926AFAC7C00E85F1A /* MomentListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentListItemView.swift; sourceTree = "<group>"; };
 		06FD4C4B26AFAEAC00E85F1A /* MomentListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentListItemViewModel.swift; sourceTree = "<group>"; };
 		06FD4C4D26AFD33900E85F1A /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		06FD4C5026AFDA0300E85F1A /* TogglesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglesDataSource.swift; sourceTree = "<group>"; };
 		0A2810A4939606F05C4A3C6E /* Pods-Moments.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments.appstore.xcconfig"; path = "Target Support Files/Pods-Moments/Pods-Moments.appstore.xcconfig"; sourceTree = "<group>"; };
 		0C3BE388A5D87650497B54DF /* Pods-MomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentsTests.debug.xcconfig"; path = "Target Support Files/Pods-MomentsTests/Pods-MomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13F30657CB98B3D18D83215F /* Pods_MomentsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MomentsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -273,6 +275,7 @@
 		06554C2526AA5BFB007E7B8B /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				06FD4C4F26AFD9DB00E85F1A /* DataStore */,
 				06554C4726AAB867007E7B8B /* Extensions */,
 				06F4C76A26AD272700445E23 /* Networking */,
 				06554C2926AA6071007E7B8B /* Routing */,
@@ -470,6 +473,14 @@
 				06F4C7B326AEA8B300445E23 /* GetMomentsByUserIDSession.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		06FD4C4F26AFD9DB00E85F1A /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				06FD4C5026AFDA0300E85F1A /* TogglesDataSource.swift */,
+			);
+			path = DataStore;
 			sourceTree = "<group>";
 		};
 		5590A371016DF6E7A106A86C /* Frameworks */ = {
@@ -786,6 +797,7 @@
 				06F4C79326AE6D8800445E23 /* MomentsRepo.swift in Sources */,
 				06554BCC26A95FF8007E7B8B /* SceneDelegate.swift in Sources */,
 				06F4C6F626AC1CBC00445E23 /* Strings.swift in Sources */,
+				06FD4C5126AFDA0300E85F1A /* TogglesDataSource.swift in Sources */,
 				06554C4926AAB87E007E7B8B /* UIApplicationExtension.swift in Sources */,
 				06F4C7A726AE83B100445E23 /* UserProfileListItemView.swift in Sources */,
 				06F4C79D26AE752E00445E23 /* UserProfileListItemViewModel.swift in Sources */,

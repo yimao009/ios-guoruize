@@ -15,10 +15,12 @@
 "internalMenu.appName" = "AppName";
 "internalMenu.CFBundleName" = "CFBundleName";
 "internalMenu.featureToggles" = "Feature Toggles";
+"internalMenu.favoriteButton" = "点赞按钮";
 
 "internalMenu.typography" = "Typography";
 "internalMenu.colors" = "Colors";
 "internalMenu.avatars" = "Avatars";
+"internalMenu.favoriteButton" = "Favorite button";
 
 "internalMenu.likeButtonForMomentEnabled" = "Like Button Enable";
 

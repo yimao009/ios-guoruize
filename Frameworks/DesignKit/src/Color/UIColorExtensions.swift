@@ -21,13 +21,13 @@ public extension UIColor {
         public static let tertiaryText: UIColor = dynamicColor(light: UIColor(hex: 0x8f90a0), dark: UIColor(hex: 0x8E8E93))
         public static let quaternaryText: UIColor = dynamicColor(light: UIColor(hex: 0xb2b2bf), dark: UIColor(hex: 0x8E8E93))
 
-        private static func dynamicColor(light: UIColor, dark: UIColor) -> UIColor {
-            return UIColor { $0.userInterfaceStyle == .light ? light : dark }
+        static private func dynamicColor(light: UIColor, dark: UIColor) -> UIColor {
+            return UIColor { $0.userInterfaceStyle == .dark ? dark : light }
         }
     }
 }
 
-private extension UIColor {
+public extension UIColor {
     convenience init(hex: Int) {
         let components = (
                 R: CGFloat((hex >> 16) & 0xff) / 255,

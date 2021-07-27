@@ -19,6 +19,7 @@
 "internalMenu.typography" = "字体";
 "internalMenu.colors" = "颜色";
 "internalMenu.avatars" = "人像";
+"internalMenu.favoriteButton" = "点赞按钮";
 
 "internalMenu.likeButtonForMomentEnabled" = "开启点赞按钮";
 

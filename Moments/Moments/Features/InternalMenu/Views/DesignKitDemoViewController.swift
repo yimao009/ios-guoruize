@@ -32,7 +32,8 @@ private extension DesignKitDemoViewController {
         let rootStackView = configure(UIStackView(arrangedSubviews: [
             buildTypography(),
             buildColors(),
-            buildAvatars()
+            buildAvatars(),
+            buildFavoriteButtons()
         ])) {
             $0.translatesAutoresizingMaskIntoConstraints = false
             $0.axis = .vertical
@@ -155,5 +156,25 @@ private extension DesignKitDemoViewController {
         }
 
         return stackView
+    }
+
+    func buildFavoriteButtons() -> UIView {
+        let title: UILabel = configure(.init()) {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.text = L10n.InternalMenu.favoriteButton
+            $0.font = UIFont.designKit.title1
+        }
+
+        let likeButton: UIButton = configure(.init()) {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.asStarFavoriteButton()
+        }
+
+        let stakcView: UIStackView = configure(.init(arrangedSubviews:[title, likeButton])) {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.axis = .vertical
+            $0.spacing = 7
+        }
+        return stakcView
     }
 }

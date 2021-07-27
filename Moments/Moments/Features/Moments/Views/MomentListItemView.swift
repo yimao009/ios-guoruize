@@ -66,6 +66,7 @@ final class MomentListItemView: BaseListItemView {
 
     private let toggleDataStore: ToggleDataStoreType
     private let userDataStore: UserDataStoreType
+    private var viewModel: MomentListItemViewModel?
 
     override convenience init(frame: CGRect = .zero) {
         self.init(frame: frame, toggleDataStore: TogglesDataStore.shared)
@@ -90,7 +91,7 @@ final class MomentListItemView: BaseListItemView {
         guard let viewModel = viewModel as? MomentListItemViewModel else {
             return
         }
-
+        self.viewModel = viewModel
         userNameLabel.text = viewModel.userName
         titleLabel.text = viewModel.title
         momentImageView.kf.setImage(with: viewModel.photoURL)
@@ -99,17 +100,6 @@ final class MomentListItemView: BaseListItemView {
 
         if toggleDataStore.isToggleOn(.isLikeButtonForMomentEnabled) {
             favoriteButton.isSelected = viewModel.isLiked
-            favoriteButton.rx.tap
-                .bind { [weak self] in
-                    guard let self = self else { return }
-                    if self.favoriteButton.isSelected {
-                        viewModel.like(from: self.userDataStore.userID).subscribe(onNext:{}).disposed(by: self.disposeBag)
-                    } else {
-                        viewModel.unlike(from: self.userDataStore.userID).subscribe(onNext:{}).disposed(by: self.disposeBag)
-                    }
-                }
-                .disposed(by: disposeBag)
-
             likesStaeView.arrangedSubviews.forEach {
                 $0.removeFromSuperview()
             }
@@ -193,6 +183,19 @@ private extension MomentListItemView {
             $0.trailing.equalToSuperview()
             $0.bottom.equalToSuperview()
             $0.height.equalTo(1)
+        }
+
+        if toggleDataStore.isToggleOn(.isLikeButtonForMomentEnabled) {
+            favoriteButton.rx.tap
+                .bind { [weak self] in
+                    guard let self = self else { return }
+                    if self.favoriteButton.isSelected {
+                        self.viewModel?.like(from: self.userDataStore.userID).subscribe().disposed(by: self.disposeBag)
+                    } else {
+                        self.viewModel?.unlike(from: self.userDataStore.userID).subscribe().disposed(by: self.disposeBag)
+                    }
+                }
+                .disposed(by: disposeBag)
         }
     }
 }

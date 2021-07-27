@@ -36,16 +36,9 @@ private extension UserDefaultsPersistentDataStore {
             .map { try? JSONDecoder().decode(MomentsDetails.self, from: $0)}
             .compactMap { $0 }
             .debug()
-//            .distinctUntilChanged { $0 != $1}
             .subscribe {
                 momentsDetail.onNext($0)
             }
             .disposed(by: disposeBage)
-
-        //        defaults.rx
-        //            .observe(String.self, "A")
-        //            .subscribe(onNext: { data in
-        //                print(data)
-        //            })
     }
 }

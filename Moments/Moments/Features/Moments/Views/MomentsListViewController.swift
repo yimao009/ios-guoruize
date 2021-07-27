@@ -12,6 +12,6 @@ class MomentsListViewController: BaseTableViewController {
         super.init()
 
         // The `userID` is hardcoded for now
-        self.viewModel = MomentsListViewModel(userID: "1", momentsRepo: MomentsRepo.shared)
+        self.viewModel = MomentsListViewModel(userID: UserDataStore.current.userID, momentsRepo: MomentsRepo.shared)
     }
 }

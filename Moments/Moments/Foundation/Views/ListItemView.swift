@@ -7,7 +7,6 @@
 
 import UIKit
 
-protocol ListItemView: class {
-    associatedtype ViewModel
-    func update(with viewModel: ViewModel)
+protocol ListItemView: AnyObject {
+    func update(with viewModel: ListItemViewModel)
 }

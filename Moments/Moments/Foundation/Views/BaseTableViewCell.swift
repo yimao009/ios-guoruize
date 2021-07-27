@@ -7,8 +7,7 @@
 
 import UIKit
 
-final class BaseTableViewCell<V: BaseListItemView<VM>, VM: ListItemViewModel>: UITableViewCell, ListItemCell {
-    typealias ViewModel = VM
+final class BaseTableViewCell<V: BaseListItemView>: UITableViewCell, ListItemCell {
 
     private let view: V
 
@@ -28,7 +27,7 @@ final class BaseTableViewCell<V: BaseListItemView<VM>, VM: ListItemViewModel>: U
         fatalError(L10n.Development.fatalErrorInitCoderNotImplemented)
     }
 
-    func update(with viewModel: ViewModel) {
+    func update(with viewModel: ListItemViewModel) {
         view.update(with: viewModel)
     }
 }

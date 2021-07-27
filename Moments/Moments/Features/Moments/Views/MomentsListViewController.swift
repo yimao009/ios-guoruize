@@ -50,7 +50,7 @@ class MomentsListViewController: BaseViewController {
 private extension MomentsListViewController {
     func setupUI() {
         let cells = [
-            UserProfileListItemViewModel.reuseIdentifier : BaseTableViewCell<UserProfileListItemView<UserProfileListItemViewModel>, UserProfileListItemViewModel>.self
+            UserProfileListItemViewModel.reuseIdentifier : BaseTableViewCell<UserProfileListItemView>.self
         ]
 
         cells.forEach {
@@ -90,7 +90,7 @@ private extension MomentsListViewController {
 
         let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, ListItemViewModel>> { _, tableView, indexPath, item in
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: type(of: item)), for: indexPath)
-            if let cell = cell as? BaseTableViewCell<UserProfileListItemView<UserProfileListItemViewModel>, UserProfileListItemViewModel>, let item = item as? UserProfileListItemViewModel {
+            if let cell = cell as? BaseTableViewCell<UserProfileListItemView>, let item = item as? UserProfileListItemViewModel {
                 cell.update(with: item)
             }
             return cell
@@ -100,7 +100,7 @@ private extension MomentsListViewController {
             .disposed(by: disposeBag)
 
         viewModel.load()
-            .do(onDispose: { self.activityIndicatorView.rx.isAnimating.onNext(false)})
+            .do(onDispose: { self.activityIndicatorView.rx.isAnimating.onNext(false) })
             .map { false }
             .startWith(true)
             .distinctUntilChanged()

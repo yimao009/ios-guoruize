@@ -48,7 +48,8 @@ extension APISession {
 private extension APISession {
     func post(_ path: String, method: HTTPMethod, parameters: Parameters?, encoding: ParameterEncoding, headers: HTTPHeaders) -> Observable<ReponseType> {
         let url = baseURL.appendingPathComponent(path)
-        var allHeaders = defaultHeaders
+        var allHeaders = HTTPHeaders(defaultHeaders.dictionary.merging(headers.dictionary){ $1 })
+
         headers.forEach { allHeaders.add($0) }
 
         return Observable.create { observer -> Disposable in

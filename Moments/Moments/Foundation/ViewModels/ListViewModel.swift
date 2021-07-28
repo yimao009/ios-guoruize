@@ -33,7 +33,8 @@ extension ListViewModel {
     }
 
     func loadItems() -> Observable<Void> {
-        listItems.onNext([])
-        return executeQuery()
+//        listItems.onNext([])
+//        return executeQuery()
+        executeQuery()
     }
 }

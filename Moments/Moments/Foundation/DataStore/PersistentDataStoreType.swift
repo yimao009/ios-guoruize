@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 
 protocol PersistentDataStoreType {
-    var momentsDetail: PublishSubject<MomentsDetails> { get }
+    var momentsDetail: BehaviorSubject<MomentsDetails?> { get }
 
     func save(momentsDetails: MomentsDetails)
 }

@@ -25,17 +25,17 @@ Run unit tests
 ```
 fastlane ios code_format
 ```
-
+Lint and format code
 ### ios code_lint
 ```
 fastlane ios code_lint
 ```
-
+Lint code
 ### ios sort_files
 ```
 fastlane ios sort_files
 ```
-
+Sort Xcode project files
 
 ----
 

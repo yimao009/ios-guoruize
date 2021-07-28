@@ -21,7 +21,7 @@ platform :ios do
   #   # add actions here: https://docs.fastlane.tools/actions
   # end
 
-  desc "Run unit tests"
+    desc "Run unit tests"
     lane :tests do
       run_tests(
         scheme: "Moments",
@@ -31,6 +31,7 @@ platform :ios do
       )
     end
 
+    desc "Lint and format code" 
     lane :code_format do
       swiftlint(
         mode: :autocorrect,
@@ -39,6 +40,7 @@ platform :ios do
         raise_if_swiftlint_error: true)
     end
     
+    desc "Lint code" 
     lane :code_lint do 
       swiftlint(
         mode: :lint,
@@ -47,6 +49,7 @@ platform :ios do
         raise_if_swiftlint_error: true)
     end
 
+    desc "Sort Xcode project files"
     lane :sort_files do
       sh "../scripts/sort-Xcode-project-file.pl ../Moments/Moments.xcodeproj"
     end

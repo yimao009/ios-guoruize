@@ -21,7 +21,7 @@ def core_pods
 end
 
 def thirdparty_pods
-  pod 'Firebase/Analytics', '7.0.0'
+  pod 'Firebase/Analytics', '8.4.0'
 end
 
 def ui_pods

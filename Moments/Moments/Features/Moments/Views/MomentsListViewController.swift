@@ -8,10 +8,17 @@
 import UIKit
 
 class MomentsListViewController: BaseTableViewController {
-    override init() {
-        super.init()
+    let trackingRepo: TrackingRepoType
 
-        // The `userID` is hardcoded for now
+    init(trackingRepo: TrackingRepoType = TrackingRepo.shared) {
+        self.trackingRepo = trackingRepo
+        super.init()
         self.viewModel = MomentsListViewModel(userID: UserDataStore.current.userID, momentsRepo: MomentsRepo.shared)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+//        trackingRepo.trackScreenviews(ScreenviewsTrackingEvent(screenName: L10n.Tracking.momentsScreen, screenClass: String(describing: self)))
     }
 }

@@ -16,11 +16,6 @@ or alternatively using `brew install fastlane`
 
 # Available Actions
 ## iOS
-### ios tests
-```
-fastlane ios tests
-```
-Run unit tests
 ### ios code_format
 ```
 fastlane ios code_format
@@ -36,16 +31,6 @@ Lint code
 fastlane ios sort_files
 ```
 Sort Xcode project files
-### ios archive_internal
-```
-fastlane ios archive_internal
-```
-Create an archive of the Internal app for testing
-### ios archive_appstore
-```
-fastlane ios archive_appstore
-```
-Creates an archive of the Production app with Appstore distribution
 ### ios create_new_profiles
 ```
 fastlane ios create_new_profiles
@@ -61,6 +46,26 @@ Download certificates and profiles
 fastlane ios add_device
 ```
 Add a new device to provisioning profile
+### ios build_dev_app
+```
+fastlane ios build_dev_app
+```
+Build development app
+### ios tests
+```
+fastlane ios tests
+```
+Run unit tests
+### ios archive_internal
+```
+fastlane ios archive_internal
+```
+Creates an archive of the Internal app for testing
+### ios archive_appstore
+```
+fastlane ios archive_appstore
+```
+Creates an archive of the Production app with Appstore distribution
 
 ----
 

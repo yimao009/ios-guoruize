@@ -21,16 +21,6 @@ platform :ios do
   #   # add actions here: https://docs.fastlane.tools/actions
   # end
 
-    desc "Run unit tests"
-    lane :tests do
-      run_tests(
-        scheme: "Moments",
-        output_directory: "./fastlane/dist",
-        output_types: "html",
-        buildlog_path: "./fastlane/dist"
-      )
-    end
-
     desc "Lint and format code" 
     lane :code_format do
       swiftlint(
@@ -52,24 +42,6 @@ platform :ios do
     desc "Sort Xcode project files"
     lane :sort_files do
       sh "../scripts/sort-Xcode-project-file.pl ../Moments/Moments.xcodeproj"
-    end
-
-    desc "Create an archive of the Internal app for testing"
-    lane :archive_internal do
-      puts("create an archive for Internal app for testing")
-      sync_code_signing(type: "appstore")
-      build_app(scheme: "Internal",
-                workspace: "Moments.xcworkspace",
-                xcargs: "-allowProvisioningUpdates")
-      upload_to_testflight
-    end
-
-    desc 'Creates an archive of the Production app with Appstore distribution'
-    lane :archive_appstore do
-      puts("Create an archive for AppStore submission")
-      build_app(scheme: "AppStore",
-            workspace: "Moments.xcworkspace",
-            xcargs: "-allowProvisioningUpdates")
     end
 
     desc "Create all new provisioning profiles managed by fastlane match"
@@ -160,6 +132,95 @@ platform :ios do
         app_identifier: "jakegrz.moments.internal",
         team_id: "98T65UM47H",
         api_key: api_key
+      )
+    end
+
+    desc "Build development app"
+    lane :build_dev_app do
+      puts("Build development app")
+      gym(
+        scheme: "Moments",
+        workspace: "Moments.xcworkspace",
+        export_method: "development",
+        configuration: "Debug",
+        xcargs: "-allowProvisioningUpdates"
+      )
+    end
+
+    desc "Run unit tests"
+    lane :tests do
+      puts("Run the tests")
+      scan(
+        scheme: "Moments",
+        output_directory: "./fastlane/dist",
+        output_types: "html",
+        buildlog_path: "./fastlane/dist"
+      )
+    end
+
+    desc 'Creates an archive of the Internal app for testing'
+    lane :archive_internal do 
+      unlock_keychain(
+        path: "TemporaryKeychain-db",
+        password: "TemporaryKeychainPassword")
+      update_code_signing_settings(
+        use_automatic_signing: false,
+        path: "Moments/Moments.xcodeproj",
+        code_sign_identity: "iPhone Distribution",
+        bundle_identifier: "jakegrz.moments.internal",
+        profile_name: "match AdHoc jakegrz.moments.internal")
+      puts("Create an archive for Internal testing")
+      gym(
+        scheme: "Internal",
+        workspace: "Moments.xcworkspace",
+        export_method: "ad-hoc",
+        xcargs: "-allowProvisioningUpdates")
+      update_code_signing_settings(
+        use_automatic_signing: true,
+        path: "Moments/Moments.xcodeproj")
+    end
+
+    desc 'Creates an archive of the Production app with Appstore distribution'
+    lane :archive_appstore do
+    unlock_keychain(
+      path: "TemporaryKeychain-db",
+      password: "TemporaryKeychainPassword")
+    update_code_signing_settings(
+      use_automatic_signing: false,
+      path: "Moments/Moments.xcodeproj",
+      code_sign_identity: "iPhone Distribution",
+      bundle_identifier: "jakegrz.moments",
+      profile_name: "match AppStore jakegrz.moments")
+    puts("Create an archive for AppStore submission")
+    gym(scheme: "Moments-AppStore",
+      workspace: "Moments.xcworkspace",
+      export_method: "app-store",
+      xcargs: "-allowProvisioningUpdates")
+    update_code_signing_settings(
+      use_automatic_signing: true,
+      path: "Moments/Moments.xcodeproj")
+    end
+
+    desc "Deploy the Internal app to Firebase Distribution"
+    lane :deploy_internal do
+      firebase_app_distribution(
+        app: "1:280050210402:ios:38bf4c8c60ebca6360a33b",
+        ipa_path: "Moments.ipa",
+        groups: "internal-testers",
+        release_notes: "A new build for the Internal App",
+        firebase_cli_token: ENV["FIREBASE_API_TOKEN"]
+      )
+    end
+
+    desc 'Deploy the Production app to TestFlight and App Store'
+    lane :deploy_appstore do
+      api_key = get_app_store_connect_api_key
+      upload_to_app_store(
+        api_key: api_key,
+        app_identifier: "jakegrz.moments",
+        skip_metadata: true,
+        skip_screenshots: true,
+        precheck_include_in_app_purchases: false,
       )
     end
 

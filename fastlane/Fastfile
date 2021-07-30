@@ -163,21 +163,26 @@ platform :ios do
       unlock_keychain(
         path: "TemporaryKeychain-db",
         password: "TemporaryKeychainPassword")
+
       update_code_signing_settings(
         use_automatic_signing: false,
         path: "Moments/Moments.xcodeproj",
         code_sign_identity: "iPhone Distribution",
         bundle_identifier: "jakegrz.moments.internal",
         profile_name: "match AdHoc jakegrz.moments.internal")
+
       puts("Create an archive for Internal testing")
       gym(
         scheme: "Internal",
         workspace: "Moments.xcworkspace",
         export_method: "ad-hoc",
         xcargs: "-allowProvisioningUpdates")
+
       update_code_signing_settings(
         use_automatic_signing: true,
         path: "Moments/Moments.xcodeproj")
+
+        puts("If you run this lane on your local machine, should not commit the changes for your project file to Git")
     end
 
     desc 'Creates an archive of the Production app with Appstore distribution'
@@ -185,20 +190,25 @@ platform :ios do
     unlock_keychain(
       path: "TemporaryKeychain-db",
       password: "TemporaryKeychainPassword")
+
     update_code_signing_settings(
       use_automatic_signing: false,
       path: "Moments/Moments.xcodeproj",
       code_sign_identity: "iPhone Distribution",
       bundle_identifier: "jakegrz.moments",
       profile_name: "match AppStore jakegrz.moments")
+
     puts("Create an archive for AppStore submission")
     gym(scheme: "AppStore",
       workspace: "Moments.xcworkspace",
       export_method: "app-store",
       xcargs: "-allowProvisioningUpdates")
+    
     update_code_signing_settings(
       use_automatic_signing: true,
       path: "Moments/Moments.xcodeproj")
+
+      puts("If you run this lane on your local machine, should not commit the changes for your project file to Git")
     end
 
     desc "Deploy the Internal app to Firebase Distribution"

@@ -46,6 +46,21 @@ Create an archive of the Internal app for testing
 fastlane ios archive_appstore
 ```
 Creates an archive of the Production app with Appstore distribution
+### ios create_new_profiles
+```
+fastlane ios create_new_profiles
+```
+Create all new provisioning profiles managed by fastlane match
+### ios download_profiles
+```
+fastlane ios download_profiles
+```
+Download certificates and profiles
+### ios add_device
+```
+fastlane ios add_device
+```
+Add a new device to provisioning profile
 
 ----
 

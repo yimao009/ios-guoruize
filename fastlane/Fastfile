@@ -71,4 +71,109 @@ platform :ios do
             workspace: "Moments.xcworkspace",
             xcargs: "-allowProvisioningUpdates")
     end
+
+    desc "Create all new provisioning profiles managed by fastlane match"
+    lane :create_new_profiles do
+      api_key = get_app_store_connect_api_key
+      keychain_name = "TemporaryKeychain"
+      keychain_password = "TemporaryKeychainPassword"
+      create_keychain(
+        name: keychain_name,
+        password: keychain_password,
+        default_keychain: false,
+        timeout: 3600,
+        unlock: true,
+      )
+      match(
+        type: "adhoc",
+        keychain_name: keychain_name,
+        keychain_password: keychain_password,
+        storage_mode: "git",
+        git_url: "https://github.com/yimao009/my-moments-codesign",
+        app_identifier: "jakegrz.moments.internal",
+        team_id: "98T65UM47H",
+        api_key: api_key
+      )
+      match(
+        type: "appstore",
+        keychain_name: keychain_name,
+        keychain_password: keychain_password,
+        storage_mode: "git",
+        git_url: "https://github.com/yimao009/my-moments-codesign",
+        app_identifier: "jakegrz.moments",
+        team_id: "98T65UM47H",
+        api_key: api_key
+      )
+    end
+
+    desc "Download certificates and profiles"
+    lane :download_profiles do
+      keychain_name = "TemporaryKeychain"
+      keychain_password = "TemporaryKeychainPassword"
+      create_keychain(
+        name: keychain_name,
+        password: keychain_password,
+        default_keychain: false,
+        timeout: 3600,
+        unlock: true,
+      )
+      match(
+        type: "adhoc",
+        readonly: true,
+        keychain_name: keychain_name,
+        keychain_password: keychain_password,
+        storage_mode: "git",
+        git_url: "https://github.com/yimao009/my-moments-codesign",
+        app_identifier: "jakegrz.moments.internal",
+        team_id: "98T65UM47H"
+      )
+      match(
+        type: "appstore",
+        readonly: true,
+        keychain_name: keychain_name,
+        keychain_password: keychain_password,
+        storage_mode: "git",
+        git_url: "https://github.com/yimao009/my-moments-codesign",
+        app_identifier: "jakegrz.moments",
+        team_id: "98T65UM47H"
+      )
+    end
+
+    desc "Add a new device to provisioning profile"
+    lane :add_device do |options|
+      name = options[:name]
+      udid = options[:udid]
+      # Add to App Store Connect
+      api_key = get_app_store_connect_api_key
+      register_device(
+        name: name,
+        udid: udid,
+        team_id: "98T65UM47H",
+        api_key: api_key
+      )
+      # Update the profiles to Git private repo
+      match(
+        type: "adhoc",
+        force: true,
+        storage_mode: "git",
+        git_url: "https://github.com/yimao009/my-moments-codesign",
+        app_identifier: "jakegrz.moments.internal",
+        team_id: "98T65UM47H",
+        api_key: api_key
+      )
+    end
+
+    desc "Get App Store Connect API key"
+    private_lane :get_app_store_connect_api_key do
+       key_content = ENV["APP_STORE_CONNECT_API_CONTENT"]
+       api_key = app_store_connect_api_key(
+        key_id: "Y8J45A9FTT",
+        issuer_id: "bd5b248d-8584-4409-82a9-e51c23cd1834",
+        key_content: "-----BEGIN EC PRIVATE KEY-----\n" + key_content + "\n-----END EC PRIVATE KEY-----",
+        duration: 1200,
+        in_house: false
+       )
+       
+       api_key
+    end
 end

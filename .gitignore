@@ -242,3 +242,6 @@ fastlane/dist
 
 # 忽略自己的组件库源码文件项目
 Private_Lib/
+
+# Keys
+local.keys

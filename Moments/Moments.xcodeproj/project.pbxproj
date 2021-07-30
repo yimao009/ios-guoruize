@@ -1053,9 +1053,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jakegrz.moments.internal;
+				PRODUCT_BUNDLE_IDENTIFIER = jakegrz.moments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc jakegrz.moments.internal";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore jakegrz.moments";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1076,9 +1076,9 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jakegrz.moments.internal;
+				PRODUCT_BUNDLE_IDENTIFIER = jakegrz.moments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc jakegrz.moments.internal";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore jakegrz.moments";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moments.app/Moments";
@@ -1097,9 +1097,9 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jakegrz.moments.internal;
+				PRODUCT_BUNDLE_IDENTIFIER = jakegrz.moments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc jakegrz.moments.internal";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore jakegrz.moments";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Moments;
@@ -1176,9 +1176,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jakegrz.moments.internal;
+				PRODUCT_BUNDLE_IDENTIFIER = jakegrz.moments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc jakegrz.moments.internal";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore jakegrz.moments";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1199,9 +1199,9 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jakegrz.moments.internal;
+				PRODUCT_BUNDLE_IDENTIFIER = jakegrz.moments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc jakegrz.moments.internal";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore jakegrz.moments";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moments.app/Moments";
@@ -1220,9 +1220,9 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jakegrz.moments.internal;
+				PRODUCT_BUNDLE_IDENTIFIER = jakegrz.moments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc jakegrz.moments.internal";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore jakegrz.moments";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Moments;
@@ -1299,9 +1299,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jakegrz.moments.internal;
+				PRODUCT_BUNDLE_IDENTIFIER = jakegrz.moments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc jakegrz.moments.internal";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore jakegrz.moments";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1322,9 +1322,9 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jakegrz.moments.internal;
+				PRODUCT_BUNDLE_IDENTIFIER = jakegrz.moments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc jakegrz.moments.internal";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore jakegrz.moments";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moments.app/Moments";
@@ -1343,9 +1343,9 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jakegrz.moments.internal;
+				PRODUCT_BUNDLE_IDENTIFIER = jakegrz.moments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc jakegrz.moments.internal";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore jakegrz.moments";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Moments;

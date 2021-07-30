@@ -217,7 +217,7 @@ platform :ios do
         app: "1:280050210402:ios:38bf4c8c60ebca6360a33b",
         ipa_path: "Moments.ipa",
         groups: "internal-testers",
-        release_notes: "A new build for the Internal App",
+        release_notes: "A new build for the Internal App-Fix App Name",
         firebase_cli_token: ENV["FIREBASE_API_TOKEN"]
       )
     end

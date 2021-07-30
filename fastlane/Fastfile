@@ -192,7 +192,7 @@ platform :ios do
       bundle_identifier: "jakegrz.moments",
       profile_name: "match AppStore jakegrz.moments")
     puts("Create an archive for AppStore submission")
-    gym(scheme: "Moments-AppStore",
+    gym(scheme: "AppStore",
       workspace: "Moments.xcworkspace",
       export_method: "app-store",
       xcargs: "-allowProvisioningUpdates")

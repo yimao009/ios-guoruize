@@ -10,4 +10,6 @@
 //
 // Store App base configurations like API URLs
 
+// set more keys
+// https://xcodebuildsettings.com/
 API_BASE_URL = momentsapi.herokuapp.com

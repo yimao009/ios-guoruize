@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>280050210402-nfliq9mq32h09r50povftacdmt0cp4vp.apps.googleusercontent.com</string>
+	<string>280050210402-ngp1qto7g6qj8p2ntvqbcje5j3out0in.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.280050210402-nfliq9mq32h09r50povftacdmt0cp4vp</string>
+	<string>com.googleusercontent.apps.280050210402-ngp1qto7g6qj8p2ntvqbcje5j3out0in</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCxc-SEjHMFdp10H6dwVJPrCVxgOoPtUxY</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>jakeguo.moments</string>
+	<string>jakegrz.moments</string>
 	<key>PROJECT_ID</key>
 	<string>moments-436a1</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:280050210402:ios:67596eb2f8dfc26960a33b</string>
+	<string>1:280050210402:ios:d0ef3e50664df50a60a33b</string>
 </dict>
 </plist>

@@ -38,9 +38,6 @@
 		06554C7B26AAD005007E7B8B /* DesignKitDemoItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C7A26AAD005007E7B8B /* DesignKitDemoItemViewModel.swift */; };
 		06554C7D26AAD098007E7B8B /* InternalMenuActionTriggerItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C7C26AAD098007E7B8B /* InternalMenuActionTriggerItemViewModel.swift */; };
 		06554C7F26AAD2F3007E7B8B /* InternalMenuActionTriggerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554C7E26AAD2F3007E7B8B /* InternalMenuActionTriggerCell.swift */; };
-		066F9D1826B3DB7700B6E0D1 /* GoogleService-Info-Development.plist in Resources */ = {isa = PBXBuildFile; fileRef = 066F9D1726B3DB7700B6E0D1 /* GoogleService-Info-Development.plist */; };
-		066F9D1A26B3DBCA00B6E0D1 /* GoogleService-Info-Internal.plist in Resources */ = {isa = PBXBuildFile; fileRef = 066F9D1926B3DBCA00B6E0D1 /* GoogleService-Info-Internal.plist */; };
-		066F9D1C26B3DC0A00B6E0D1 /* GoogleService-Info-AppStore.plist in Resources */ = {isa = PBXBuildFile; fileRef = 066F9D1B26B3DC0A00B6E0D1 /* GoogleService-Info-AppStore.plist */; };
 		06F4C6E726ABCE8600445E23 /* DesignKitDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C6E626ABCE8600445E23 /* DesignKitDemoViewController.swift */; };
 		06F4C6F026AC14E000445E23 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06F4C6F226AC14E000445E23 /* Localizable.strings */; };
 		06F4C6F626AC1CBC00445E23 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C6F526AC1CBC00445E23 /* Strings.swift */; };
@@ -709,9 +706,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				06554BD326A95FFA007E7B8B /* Assets.xcassets in Resources */,
-				066F9D1C26B3DC0A00B6E0D1 /* GoogleService-Info-AppStore.plist in Resources */,
-				066F9D1826B3DB7700B6E0D1 /* GoogleService-Info-Development.plist in Resources */,
-				066F9D1A26B3DBCA00B6E0D1 /* GoogleService-Info-Internal.plist in Resources */,
 				06554BD626A95FFA007E7B8B /* LaunchScreen.storyboard in Resources */,
 				06F4C6F026AC14E000445E23 /* Localizable.strings in Resources */,
 			);

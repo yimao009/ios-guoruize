@@ -51,6 +51,7 @@ extension UIWindow {
     open override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         let appRoute: AppRouting = AppRouter()
         if motion == .motionShake {
+            TrackingRepo.shared.trackEvent(TrackingEvent(name: "shake", parameters: ["userID":UserDataStore.current.userID, "datatime": Date()]))
             appRoute.presentInternalMenu(from: rootViewController)
         }
     }

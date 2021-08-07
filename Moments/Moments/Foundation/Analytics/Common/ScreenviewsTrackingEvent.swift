@@ -9,6 +9,5 @@ import Foundation
 
 struct ScreenviewsTrackingEvent: ScreenviewsTrackingEventType {
     var screenName: String
-
     var screenClass: String
 }
